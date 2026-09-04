@@ -1,12 +1,21 @@
-# Why Is There Still No Agentic Enterprise? Yet.
+# The commitment cannot travel
 
-## A disputation, in two voices, with nine hypotheses and a way to test them
+## Why is there still no agentic enterprise? Yet.
+
+**A disputation, in two voices, with nine hypotheses and a way to test them.**
 
 **Author:** Ragnar Pitla
-**Version:** 3.0, 4 September 2026
+**Version:** 4.0, 4 September 2026
 **Status:** Working paper. Circulated for disagreement.
 **Companion site:** https://ragnarpitla.github.io/Agentic-Enterprise/
 **Measurement script:** [`census.py`](census.py), six controls, output in [`evidence-census.txt`](evidence-census.txt)
+
+> **On the title.** `[CORRECTED]` Through v3 the question was the title. A reviewer argued the
+> question is a talk title, not a spine, and that a reader finishing the paper still could not say
+> in one line what it claims. That was fair. The spine is now the claim and the question is the
+> subtitle. The **"Yet"** stays, and it is not a stutter: without it this joins the genre that
+> reports the shortfall and stops, and the whole second half of the paper is an argument that the
+> shortfall is a missing object rather than a verdict.
 
 ---
 
@@ -234,6 +243,25 @@ validate transactions. Exposing it is an interface convention, not a research pr
 This is the spine of the paper. Each hypothesis is stated so that a reasonable person could gather
 evidence against it, and each carries the observation that would kill it.
 
+**Three of the nine carry the argument. The other six support it or belong to a later chapter, and
+the paper should say so rather than presenting nine flat claims and letting a reader guess.**
+`[CORRECTED]` A reviewer put this as "nine hypotheses is a program, a paper needs three". I do not
+accept the cut, because the same review asks for dissertation-grade stances on ambiguity and on
+economics, and article-grade compression and dissertation completeness are not available at the
+same time. But the reviewer was right that nothing in the text ranked them. This does.
+
+| | Hypothesis | Standing | Why |
+|---|---|---|---|
+| **Load-bearing** | **H2** cliff | not run | The decisive experiment. If the cliff lifts with model generation, most of this paper is decoration. Stated in section 9.1, and I said this before anyone else did. |
+| **Load-bearing** | **H5** pencil | not run | The cheapest test that exists today, and the one most likely to return a partial null. Run it on the wrong dependent variable and it false-confirms. |
+| **Load-bearing** | **H8** concentration | argued | Changes what can be built by whom. Without it, section 10.5 is a wish about procurement. |
+| Supporting | **H3** reachability | measured | The one original empirical finding here, and the reason the missing object is not a metaphor. It is not the title claim. |
+| Supporting | **H4** selection | argued | Why the tax is paid per call. The bound is conditional, not decorative: error rises *only if* evidence stays bounded, and section 5.1 shows the triggering condition holds. |
+| Supporting | **H1** decomposition | argued | A claim about how the work is cut, not about how many processes run. The fleet-versus-one-agent version is dead; see section 6.1. |
+| Landmine | **H6** reconciliation | argued | If true, phase 5 of section 10.2 does not pay for itself. Carried into section 10.2 rather than left in section 8.2. |
+| Sharpened | **H7** capture | withdrawn, restated | The strong "never recorded" form is gone. What remains is enumerability, and H2 now says the same thing rather than contradicting it. |
+| Later chapter | **H9** human ceiling | argued | Bainbridge. It caps the timeline. It does not explain the missing layer. |
+
 ### H1 - The decomposition hypothesis `[ARGUED]`
 
 > Enterprise agent fleets are partitioned along **application** boundaries. Application boundaries
@@ -251,11 +279,26 @@ PSPACE-complete. That was a category error: those results concern computing an o
 offline over a known model, and no system in this stack does that. The replacement above is weaker,
 computable, and immune to the objection that the agents can simply talk to each other.
 
-### H2 - The cliff hypothesis `[ARGUED]`
+### H2 - The cliff hypothesis `[ARGUED]` `[LOAD-BEARING]`
 
 > Autonomous completion rate falls **discontinuously** at authority boundaries, and the size of the
-> discontinuity **does not shrink as model capability rises**, because the missing information was
-> never recorded and cannot be inferred.
+> discontinuity **does not shrink as model capability rises**, because the commitment was never
+> recorded *as a commitment* and so cannot be enumerated, monitored, or handed across the boundary
+> by any reader of the residue, however capable.
+
+`[CORRECTED]` An earlier form of this hypothesis read "because the missing information was never
+recorded and cannot be inferred". That is the strong version of H7, which H7 itself withdraws below.
+Left standing, H2 and H7 contradicted each other: H7 concedes the information usually *is* recorded
+somewhere as residue, and H2 claimed it was not recorded at all. The two now say the same thing,
+which is a claim about **typing and enumerability**, not about existence. A reviewer caught this;
+it is not a paraphrase.
+
+**Dependent variable, pre-registered.** Completion is scored against the section 1.1 definition:
+the run must close, escalate, or renegotiate the underlying commitment **under the published
+perturbation battery** of section 9.2. Clean-path completion is not the dependent variable and must
+be reported separately, because clean-path completion across boundaries is straight-through
+processing, which section 1.1 already excludes from agency. Measuring the clean path would confirm
+this hypothesis with a FIX engine.
 
 **Falsified if:** completion decays smoothly with the number of boundaries crossed, and the curve
 lifts with each model generation. That result would mean the shortfall is a reliability problem,
@@ -284,7 +327,7 @@ This is the one hypothesis with direct measurement behind it already. Section 5.
 **Falsified if:** measured `I(Z;X)` grows with `log N` in a real library, or if selection accuracy
 holds flat as `N` rises under a controlled sweep with confusability held constant.
 
-### H5 - The provisional-write hypothesis `[ARGUED]`
+### H5 - The provisional-write hypothesis `[ARGUED]` `[LOAD-BEARING]`
 
 > The binding constraint on cross-boundary autonomy is the **absence of a provisional-write state
 > class** in systems of record, not model capability.
@@ -295,7 +338,24 @@ right, autonomous cross-boundary behaviour should be **measurably further along 
 than in domains of comparable complexity without the primitive.** If it is not further along, H5 is
 in serious trouble and the pencil is a nice idea that does not bind.
 
-**Falsified if:** domains with provisional writes show no advantage in autonomous crossing.
+**Dependent variable, pre-registered, and this is where an earlier draft of the experiment would
+have deceived itself.** `[CORRECTED]` The natural experiment must be scored on the section 1.1
+definition: does the system **renegotiate under the published perturbation battery**? It must not
+be scored on autonomous crossing. Airlines already cross boundaries without a human relay, so an
+experiment scored on crossing will return a confident yes and will have measured straight-through
+processing. Two facts make that outcome likely and neither is hypothetical: airlines hold the
+pencil and still **halt on invariant breach** rather than replan, which section 1.1 puts on the
+automation side of the line; and *Moffatt v. Air Canada* is a chatbot failing inside a
+pencil-holding domain.
+
+**The likeliest honest result is a partial null, and it is worth saying so before running it.** If
+pencil domains win on crossing and lose on renegotiation, H5 survives only in a demoted form: the
+provisional write is **necessary for cheap Level 2 and not sufficient for Level 3**, which moves it
+out of section 2.2's "strongest mechanism" slot. That would be a good result. It is also the result
+this paper would have missed by running the experiment as originally written.
+
+**Falsified if:** domains with provisional writes show no advantage in renegotiation under the
+perturbation battery.
 
 ### H6 - The reconciliation hypothesis `[ARGUED]`
 
@@ -329,7 +389,7 @@ record, and measure reconstruction from surrounding evidence.
 > commitments recorded only as residue cannot be **enumerated**, and an obligation you cannot
 > enumerate is one you cannot monitor. The strong version is withdrawn.
 
-### H8 - The concentration hypothesis `[ARGUED]`
+### H8 - The concentration hypothesis `[ARGUED]` `[LOAD-BEARING]`
 
 > Agentic capability is concentrating into roughly five model vendors. Enterprise **state** is
 > fragmenting across hundreds of application vendors. The agentic layer requires both, and no party
@@ -364,7 +424,11 @@ Section 8.4.
 ## 4. What the two seats disagree about
 
 The disputation format is not decoration. On three questions the engineering seat and the
-institutional seat give different answers, and the paper does not resolve them.
+institutional seat gave different answers. `[CORRECTED]` This section used to end by saying the
+paper does not resolve them, and after four review rounds that had stopped being honest reporting
+and started being fatigue. It now takes a position on 4.1, uses a reply it already had on 4.2, and
+concedes 4.3 almost entirely. What remains unresolved in 4.2 is stated as a specific open question
+rather than as a general dread.
 
 ### 4.1 Is ambiguity a defect or a feature?
 
@@ -379,9 +443,34 @@ institutional seat give different answers, and the paper does not resolve them.
 > declaration is tedious but that **categorisation is an exercise of power**: someone decides which
 > box your work goes in, and agents industrialise that rather than removing it.
 
-**Unresolved.** The paper's response is to make tolerance a first-class attribute rather than an
-absence of one, so that "Friday plus or minus two days, hard stop month end" is representable. That
-is a partial answer at best, and it does not touch the power critique at all.
+**A position, replacing an earlier refusal to take one.** `[CORRECTED]` This section previously
+ended "unresolved", with tolerance offered as "a partial answer at best". Four review rounds is long
+enough. Here is the stance.
+
+**The objection wins on ambiguity, and the paper concedes it outright.** Slack is not a recording
+failure. "Early next week" is a purchased option, and a system that converts every such promise into
+a dated dependency does not produce precision, it produces gridlock and a queue of technically
+breached commitments nobody intended to make. It follows that a commitment ledger whose schema
+cannot express slack is not an incomplete version of the right thing; it is the wrong thing, and
+building it would reproduce the failure of 1986 with better parsing. **Tolerance is therefore not a
+nice-to-have attribute. "Deliberately unspecified" has to be a legal, first-class, non-null value in
+the type, and a ledger that cannot store it should not be built.**
+
+**The objection also wins on power, and no schema decision touches it.** Suchman's critique is not
+that categorisation is hard. It is that categorisation is authority: someone decides which box your
+work goes in, and the decision has consequences for you. That does not dissolve because a model does
+the sorting. It industrialises.
+
+**Where I differ is on what follows from that.** The Coordinator's specific mistake was asking the
+*speaker* to classify their own speech act at the moment of speaking, which put the exercise of
+authority in the most visible and most resented place available and is why users revolted. The
+inference usually drawn is that commitment systems are therefore unbuildable. I think the correct
+inference is narrower: **the categorisation must be attributable and contestable rather than
+ambient.** The model proposes a typing, a named human holds it, and the person it binds can see it
+and dispute it. That is not a solution to the power critique and I am not claiming it is one. It is
+a decision about *where the authority is visible*, and the honest reading is that this is a
+governance question wearing a data-modelling costume. It sits outside the formal model in section
+6.2 for that reason, not by oversight.
 
 ### 4.2 Who does the ledger actually kill?
 
@@ -392,8 +481,28 @@ is a partial answer at best, and it does not touch the power critique at all.
 > nothing better. General counsel will kill this before any CTO gets to evaluate it, and the more
 > faithful the record, the stronger the argument for killing it.
 
-**Unresolved, and nobody in this work has an answer.** It is listed in section 8 as an open risk
-rather than dressed up as a solved problem.
+> **PROPOSITION, and this paper previously declined a reply it already had.** `[CORRECTED]` Earlier
+> versions marked this "unresolved, and nobody in this work has an answer". That was not honest
+> reporting of a gap; it was a shiver where an argument belonged, because the paper's own section
+> 2.1 already establishes the counter-example. **ASC 606 and IFRS 15 require exactly this artefact.**
+> A public company already maintains a complete, timestamped, itemised record of its performance
+> obligations, already retains it, and it is already discoverable. General counsel has not killed
+> revenue recognition. So "a faithful obligation record is uniquely fatal in discovery" cannot be
+> asserted from the faithfulness alone. It needs a difference, and there is one.
+
+> **OBJECTION, restated on the real difference.** The 606 ledger is **retrospective and counselled**:
+> it is assembled after the fact, by accountants, under a policy, with legal review before it is
+> filed, and its categories are the ones the firm chose to defend. A live commitment log is
+> **contemporaneous and uncounselled**: it captures the promise at the moment of promising, in the
+> words used, by whoever used them, before anyone decides what it meant. That is not the same
+> exhibit. It is closer to a recorded call than to a filing, and firms already treat those two
+> categories very differently.
+
+**Genuinely unresolved, but now unresolved about the right thing.** The open question is not whether
+an obligation ledger can exist inside a company, because one already does. It is whether a
+contemporaneous, uncounselled one can, and what retention and privilege posture makes that
+survivable. The paper has no answer to that and section 8.2 carries it. What the paper no longer
+does is treat the whole category as radioactive when its own accounting section proves it is not.
 
 ### 4.3 Is this new?
 
@@ -415,7 +524,33 @@ rather than dressed up as a solved problem.
 
 ## 5. Evidence
 
-### 5.1 The selection tax `[MEASURED]`
+**Read this section in this order, because the strongest evidence here is not the measured
+evidence.** `[CORRECTED]` A reviewer warned that the census leads, that it is my own laptop, and
+that readers will strip the scope limit and cite "309 skills, 22,312 tokens" as though it were a
+finding about SAP. That is a fair prediction and the ordering invited it.
+
+Ranked by what each item can actually carry:
+
+1. **The vendor catalogue negative finding (5.5).** Six vendors publish agent catalogues. Counting
+   them is secondary; the result is the **absent segment**. Not one catalogue has a quote-to-cash,
+   order-to-delivery or issue-to-resolution entry. This is evidence about the industry, from the
+   industry's own published material, and it is the single most load-bearing observation in the
+   paper.
+2. ***Moffatt v. Air Canada* (5.5).** A decided case, so it establishes **existence, not
+   prevalence**: the ground-it-and-disclaim remedy has already failed in a tribunal, and the
+   tribunal declined to treat the policy page as inherently more trustworthy than the chatbot.
+3. **The missing garbage collector (5.2).** The one original empirical finding here. Four decay
+   modes, no collector for any, and the reason is structural rather than lazy: you cannot compute
+   reachability without durable objectives. Same missing object as the rest of the paper, showing
+   up as a second symptom.
+4. **The selection tax (5.1).** An **illustration** of H4 on a library I can measure exhaustively.
+   It is a coding-assistant skill library on one machine. It is not a claim about enterprise agent
+   fleets, and any sentence citing it as one is misciting it.
+
+Items 3 and 4 are why the argument has a mechanism. Items 1 and 2 are why anyone outside my laptop
+should care.
+
+### 5.1 The selection tax `[MEASURED]` `[ILLUSTRATION, not a finding about vendors]`
 
 **Scope limit, stated before the numbers.** This census measures a coding-assistant skill library:
 markdown procedure files, symlinks, a token menu. Vendor "agents" are commercial products carrying
@@ -675,9 +810,30 @@ Workflow and BPM engines already have case identity, and that is conceded rather
 
 ## 7. Where the reviews overreached
 
-Four adversarial reviews produced thirty-one reversals. A paper that logs every one without ever
-defending a position has stopped being a paper and become a transcript. Two objections do not
+Five adversarial reviews produced forty-one reversals. A paper that logs every one without ever
+defending a position has stopped being a paper and become a transcript. Three objections do not
 survive contact.
+
+**"Nine hypotheses is a program. A paper needs three."**
+
+`[ARGUED]` This is a genre claim wearing an argument's clothes, and it is self-undermining in the
+review that made it. The same review asks this paper to take a dissertation-grade stance on
+Suchman's power critique, to bound the economics of leg two, and to settle the discovery question
+against ASC 606. Those are requests for *more* completeness. Article-grade compression and
+dissertation-grade completeness are not simultaneously available, and a review asking for both on
+one page has not decided which document it is reading.
+
+What is right underneath it: nothing in the text told a reader which hypotheses carried the argument
+and which supported it. That is a real defect and the ranking table in section 3 is the fix. Cutting
+six hypotheses would not have fixed it, because the problem was never the count. It was the absence
+of a rank.
+
+The same review also proposed demoting H4 to a methods appendix. That loses the conditional, which
+is the only interesting thing about it: Fano says selection error rises **only if** the mutual
+information stays bounded, and section 5.1 shows the triggering condition holds in a library I can
+measure exhaustively. A bound with a measured trigger is a live claim. Moved out of the lead, yes.
+Moved to the back, no. And moving H3 out of the argument, in the same breath as calling it "the one
+empirical finding that is yours", is not a position I can act on.
 
 **"The one-executor thesis is unfalsifiable, because a harness that swaps model, prompt, memory and
 permissions can emulate any specialist. It is a universal host."**
@@ -739,8 +895,36 @@ mitigation.**
 **Leg four: it already exists in pieces.** Event sourcing, BPM engines, CLM tools, and ASC 606
 obligation tracking each cover part of the ground. The residual may not justify a new primitive.
 
-`[ARGUED]` The paper's answer to legs one and four is the experiment in section 9.1. **It has no
-answer to leg two**, and leg two is the one that decides whether any of this gets built.
+`[ARGUED]` The paper's answer to legs one and four is the experiment in section 9.1.
+
+**Leg two, bounded.** `[CORRECTED]` Earlier drafts left leg two standing with the sentence "it has
+no answer to leg two, and leg two is the one that decides whether any of this gets built". A
+reviewer pointed out that a paper cannot nominate the decisive objection and then leave it as
+atmosphere. It cannot, and the repair is to give up the general claim rather than to invent an
+answer.
+
+The general claim is dead: **across all boundary crossings, leg two is probably right.** Most
+crossings are low-volume, high-variance, and cheaper to resolve on a call than to model. A
+commitment layer priced against the average crossing does not pay for itself, and the market
+declining it is not irrational.
+
+What survives is a restriction of the domain to crossings whose **breach is expensive**, where the
+four-minute call is not the relevant comparison because the call is not what the failure costs:
+
+- a contractual penalty or a service credit attaches to the date
+- a regulator, an auditor or a court can ask what was promised and when
+- the breach is customer-visible, which is the *Moffatt* class: the airline's costs were the
+  tribunal, the ruling and the precedent, not the four minutes it would have taken to answer
+  correctly
+- the commitment is one of many against a shared constraint, so a missed one silently reprices the
+  others
+
+**This narrows the paper.** It is no longer an argument about enterprise work in general. It is an
+argument about the subset of crossings where a broken promise has a price tag, and it now owes a
+number it does not have: what share of crossings that subset is. Section 8.5 carries it as a
+standing kill criterion. If the expensive-breach subset turns out to be small enough that a
+commitment layer cannot amortise, leg two takes the paper with it, and I would rather that be
+falsifiable than unmentioned.
 
 ### 8.2 Open risks, unmitigated
 
@@ -894,6 +1078,15 @@ formation-surface argument in section 8.3 was unnecessary. If organisations reac
 rates with no measurable change in the capability of the people handling exceptions, H9 is wrong and
 Bainbridge does not bind here.
 
+**A sixth, added with the bounding of leg two.** `[CORRECTED]` Section 8.1 gives up the general
+economic claim and restricts the paper to crossings whose breach carries a price: a penalty or
+service credit, a regulator or a court, customer-visible failure of the *Moffatt* class, or a shared
+constraint that silently reprices when one commitment slips. That restriction owes a number the
+paper does not have. **If the expensive-breach subset is measured and turns out to be too small or
+too concentrated in a few processes to amortise a commitment layer, leg two is right and this thesis
+goes with it.** I would rather carry that as a kill criterion than as a caveat, because it is the
+criterion most likely to fire.
+
 ---
 
 ## 9. How to test it
@@ -987,6 +1180,38 @@ what was written, what was reversed. At the end of the session it is thrown away
 transcript is kept. The capture cost is near zero because the information is already in memory. The
 only change is not deleting it.
 
+#### 10.1.1 The stack, so that three different unlocks stop competing
+
+`[CORRECTED]` Until this revision the paper nominated an unlock in three places and meant a
+different thing each time. Section 2.2 said the binding constraint is the missing provisional write.
+This section said it is the discarded decision object. Section 8.3 said it is capture at the
+formation surface. All three were written as *the* answer, and a reader who finished section 10 could
+not say what to build first. A reviewer named this as the last load-bearing defect in the paper and
+was right.
+
+They are not substitutes. They are layers, and each one buys something the others do not.
+
+| Layer | What it buys | What it does **not** buy |
+|---|---|---|
+| **Provisional write** (2.2, H5) | Cheap Level 2. Reversibility you can manufacture instead of reasoning about | **Not agency.** Airlines hold the pencil and still halt on invariant breach. Necessary for Level 2, not sufficient for Level 3 |
+| **Durable case and commitment** (H3) | An object to monitor, fulfil and renegotiate, and a reachability graph so a registry can finally be collected. Same missing object, two symptoms | Not enough if the store only has ink. A case you cannot provisionally write to still needs a human at every crossing |
+| **Capture at formation** (8.3, H8) | Enumerability, into a log the enterprise owns rather than one that becomes a vendor's moat | **Does not settle disputed fulfilment.** H6 says reconciliation is the expensive half, and capture does not touch it |
+| **Human exception ceiling** (H9) | An honest ceiling on the timeline | Not a software primitive, and nothing in this stack removes it. Bainbridge applies |
+
+**Read in order, the stack says: own the log, buy the pencil where you can, and do not pretend
+either one closes reconciliation.**
+
+Owning the log is first because it is the only layer you can start on Monday without a vendor's
+permission, and because H8 says the surfaces where commitments are formed are already concentrated
+in about two suites, so the window in which the log is yours to own is not indefinite. The pencil is
+second because it is procurable: it is a feature request against the systems of record you already
+buy, and section 8.3 explains why that request is realistic for the top twenty and hopeless for the
+tail. Reconciliation is last, unsolved, and section 10.2 phase 5 is priced accordingly.
+
+**What this costs the paper.** Section 2.2 no longer holds the title of strongest mechanism. It
+holds the title of cheapest necessary condition, which is a smaller claim, and H5 as pre-registered
+in section 3 may demote it further.
+
 ### 10.2 Six phases
 
 | Phase | What ships | Why it pays for itself |
@@ -996,7 +1221,7 @@ only change is not deleting it.
 | **2. Gates on humans** | Deterministic policy checks run against **human** actions first | Finds broken controls immediately, with no agent risk. The gates are validated before anything autonomous depends on them |
 | **3. Case identity** | A durable case object with a state machine, timers and a compensation cursor | Cross-system status becomes answerable, which is already a reporting request |
 | **4. Provisional writes** | One system of record exposes a provisional-write state class and a `predict()` endpoint | Enables dry runs and safe retries for existing automation, before any agent uses it |
-| **5. Commitment capture** | Models transcribe informal promises into typed commitments at the moment of promising, from the formation surface, into a log the enterprise owns | The translation interface is the genuine delta from section 4.3, and section 8.3 is why it starts at formation rather than at fulfilment |
+| **5. Commitment capture** | Models transcribe informal promises into typed commitments at the moment of promising, from the formation surface, into a log the enterprise owns | The translation interface is the genuine delta from section 4.3, and section 8.3 is why it starts at formation rather than at fulfilment. **This is the phase most likely not to pay for itself: H6 says reconciliation is the expensive half and capture does not touch it. Price it as a bet, not as a saving** |
 | **6. Delegation** | Objectives assigned against cases, executed by an unprivileged planner through narrow authorised executors | Level 3 on the ladder |
 
 **Phase 0 is new and it is deliberately first.** `[CORRECTED]` The earlier version of this plan began
@@ -1138,7 +1363,8 @@ in-context prompting failed on held-out tasks.
 ## Appendix D - Corrections of record
 
 Thirty-one claims from earlier drafts were withdrawn, reversed or narrowed across four adversarial
-reviews on separate frontier models. The full thirty-one row table lives in the companion file
+reviews on separate frontier models, and ten more in a fifth review recorded in D.2 below. The full
+thirty-one row table for the first four lives in the companion file
 [`corrections-full.md`](corrections-full.md), section D. The categories:
 
 | Category | Count | Most consequential |
@@ -1156,6 +1382,32 @@ reviews on separate frontier models. The full thirty-one row table lives in the 
 decisions has an obligation to keep its own. Two of the entries are errors in this paper's own
 measurements, and both were caught by re-running the measurement rather than by re-reading the
 argument. That is the method, demonstrated on itself.
+
+### D.2 - Version 4, a fifth review
+
+A fifth review read v3 and reported that the original claim was correctly dead, that the method held,
+and that the remaining defect was structural: **three different unlocks were each written as the
+answer, and the paper never said which hypotheses carried it.** Ten further claims were withdrawn or
+changed. Running total: forty-one corrections.
+
+| # | Withdrawn or changed | Replaced by |
+|---|---|---|
+| 32 | H2's mechanism, "the missing information was never recorded and cannot be inferred" | Recorded but not typed as a commitment, therefore not enumerable. H7 had already conceded this and the two hypotheses were contradicting each other in the same document |
+| 33 | H2's dependent variable, unstated and defaulting to clean-path completion | Completion under the pre-registered perturbation battery. Scored on the clean path, H2 is confirmed by a 1998 FIX engine |
+| 34 | H5's dependent variable, "autonomous cross-boundary behaviour" | Renegotiation under the perturbation battery. This is the withdrawn section 1.1 definition, so the natural experiment as written would have false-confirmed on airlines, who hold the pencil and still halt on invariant breach |
+| 35 | Section 2.2's standing as the strongest mechanism | Cheapest necessary condition for Level 2. Not sufficient for Level 3, and H5 may demote it further |
+| 36 | The general economic claim behind section 8.1, and the admission that the paper had no answer to leg two | Leg two conceded in general. The paper is restricted to crossings whose breach carries a price, and now owes a number it does not have. New kill criterion in 8.5 |
+| 37 | Section 4.2, "unresolved, and nobody in this work has an answer" | ASC 606 already is a retained, discoverable obligation ledger, so faithfulness alone cannot be what kills it. The real distinction is retrospective and counselled versus contemporaneous and uncounselled |
+| 38 | Section 4.1, "unresolved", with tolerance offered as a partial answer | Ambiguity conceded outright: "deliberately unspecified" must be a legal value or the ledger should not be built. On power, Suchman is right and no schema touches it; what changes is where the authority is visible |
+| 39 | Nine hypotheses presented flat | Three marked load-bearing, one marked a landmine under section 10, one marked a later chapter |
+| 40 | Section 5 leading with the census | Reordered by what each item can carry. The census is relabelled an illustration of H4, because a reader was going to strip the scope limit and cite it as a finding about vendors |
+| 41 | The title as a question | The claim as the title, the question as the subtitle |
+
+**Where I did not concede.** The same review proposed cutting to three hypotheses, demoting H4 to a
+methods appendix, moving H3 out of the argument, converting the disputation to a single voice, and
+dropping the "Yet". I declined all five, and the reasons are in section 7 and in the note under the
+title. The relevant one: a review cannot ask for article-grade compression and dissertation-grade
+completeness in the same pass, and this one asked for both on the same page.
 
 ## Appendix E - Three routes, one object
 
