@@ -41,6 +41,7 @@
       <ul>
         <li><a href="#how-it-works">The argument</a></li>
         <li><a href="#proof">Evidence</a></li>
+        <li><a href="#outside">Sources</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="https://github.com/RagnarPitla/Agentic-Enterprise">GitHub</a></li>
         <li><a class="cta" href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/agentic-enterprise.md">Read the paper</a></li>
@@ -292,6 +293,42 @@
 <span class="comment">copilot symlinks         : 175 total, 19 broken</span>
 <span class="comment">claude  symlinks         : 180 total, 19 broken</span></pre>
       </div>
+    </div>
+  </section>
+
+  <!-- =================================================== EXTERNAL EVIDENCE -->
+  <section class="prose-section" id="outside" aria-labelledby="outside-heading">
+    <div class="container">
+      <h2 id="outside-heading">What holds up outside my own machine</h2>
+      <p>A census of one laptop is evidence about skill libraries, not about enterprises. So the claims that matter most were checked against primary sources, and the ones that failed that check were dropped rather than softened.</p>
+
+      <h3>An agent has already committed a company to a promise its systems did not hold</h3>
+      <p>The paper's central mechanism is not hypothetical. It has been litigated. In <em>Moffatt v. Air Canada</em>, 2024 BCCRT 149, a chatbot told a passenger he could apply for a bereavement fare retroactively. The airline's own policy page said the opposite. The tribunal found for the passenger in negligent misrepresentation and awarded CAD 812.02.</p>
+      <p>Two paragraphs of that decision are load-bearing. At paragraph 27 the tribunal notes the airline's position amounts to treating the chatbot as a separate legal entity responsible for its own actions, and calls it a remarkable submission. At paragraph 28 it goes further, and this is the part that matters here: the airline could not explain why the page titled "Bereavement travel" was inherently more trustworthy than its chatbot, or why a customer should have to check one part of a website against another.</p>
+      <p><strong>That is the grounding fix failing in court.</strong> Air Canada had the authoritative page, and had linked to it. The commitment was still formed at the conversational surface, and the law declined to privilege the system of record over it. Anyone whose plan is "ground the agent and add a disclaimer" should read paragraph 28 before relying on it.</p>
+      <p>Worth stating the limits: this is a small-claims tribunal, the sum is CAD 812.02, it is not binding precedent, and the tribunal never used the words authority, ownership or system of record. It is one documented instance, not a trend.</p>
+
+      <h3>The selection tax is measured, first-party, and larger than I assumed</h3>
+      <p>My census could show that a capability index costs tokens. It could not show that the index degrades selection, because I had no accuracy data. Anthropic has published some, and it is an admission against interest.</p>
+      <table class="data-table">
+        <caption>Anthropic, "Advanced tool use", on removing tools from context rather than adding them</caption>
+        <thead><tr><th>Measure</th><th>Reported</th></tr></thead>
+        <tbody>
+          <tr><td>Opus 4 accuracy on MCP evaluations, large tool libraries</td><td>49% without tool search, 74% with</td></tr>
+          <tr><td>Opus 4.5, same evaluation</td><td>79.5% without, 88.1% with</td></tr>
+          <tr><td>58 tools across five connectors</td><td>about 55K tokens before the conversation starts</td></tr>
+          <tr><td>Tool definitions at Anthropic before optimisation</td><td>134K tokens</td></tr>
+        </tbody>
+      </table>
+      <p>The failure mode they name is the one my census found structurally: wrong tool selection, worst when names are similar. My library's worst pair scores an exact 1.00. So the degradation is not a theoretical consequence of having many options. It is a measured consequence of having many options described badly, which is a different problem with a different fix.</p>
+      <p>These are internal evaluations with no published methodology, sample size or confidence intervals. A 25-point gap is too large to be noise, but it is not a controlled result and should not be cited as one.</p>
+
+      <h3>Somebody reached the authority argument before I did</h3>
+      <p>Thoughtworks published an Agentic Scope of Authority Framework, framed around what an agent is legally authorised to commit the enterprise to, and reached for agency law to do it. That is the same problem this paper is about, arrived at by a different route and published first. The synthesis here is different, but the observation is not novel and it would be dishonest to present it as such.</p>
+
+      <h3>Numbers I decided not to use</h3>
+      <p>The figure circulating as "1.3 billion AI agents by 2028" is an IDC info snapshot sponsored by Microsoft, which its own footnote states. It is a vendor-commissioned forecast, so it is not independent analyst work and it is not a measurement of anything. I found no primary, methodologically-disclosed dataset quantifying enterprise agent duplication, abandonment or maintenance cost, which is why the argument here rests on a mechanism rather than a market size.</p>
+      <p>One number was too good to leave out, because it is self-refuting. Workday markets its Agent System of Record as a way for one team to govern thousands of AI agents. The published catalogue on the same page contains 21.</p>
     </div>
   </section>
 

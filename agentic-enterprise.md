@@ -529,6 +529,28 @@ the worst pair remains an exact 1.00. The count is withdrawn as a citable number
 
 ---
 
+### 5.5 External evidence, and what failed verification `[ESTABLISHED]`
+
+A census of one laptop is evidence about skill libraries, not about enterprises. Claims that carry weight were checked against primary sources; those that failed were dropped rather than softened.
+
+**PROPOSITION.** The mechanism this paper describes -- an agent forming a commitment no system of record holds -- is not hypothetical. It has been litigated. In *Moffatt v. Air Canada*, 2024 BCCRT 149 (decided 14 February 2024), a chatbot told a passenger he could claim a bereavement fare retroactively; the airline's policy page said the opposite. The tribunal found negligent misrepresentation, applying *Queen v. Cognos Inc.*, 1993 CanLII 146 (SCC), and awarded CAD 812.02.
+
+Paragraph 28 of the decision is the one that matters, and it is the one nobody quotes. The airline could not explain why the page titled "Bereavement travel" was inherently more trustworthy than its chatbot, nor why a customer should have to check one part of a website against another. Air Canada *had* the authoritative page and *had* linked to it (paragraph 16). The commitment was still formed at the conversational surface, and the tribunal declined to privilege the system of record over it. This is the grounding-plus-disclaimer remedy failing in court, which makes it the strongest available answer to the most common objection to H1.
+
+**OBJECTION.** A small-claims tribunal, CAD 812.02, no binding precedent, and the tribunal never used the words *authority*, *ownership* or *system of record*. One documented instance is not a trend, and reading a doctrine of write authority into a consumer-protection award is exactly the overreach this paper accuses others of. The proposition is entitled to say the mechanism *occurs*. It is not entitled to say it is *common*.
+
+**PROPOSITION.** Accepted, and the claim is narrowed accordingly: existence, not prevalence.
+
+Second item. Section 5.1 could show that a capability index costs tokens; it could not show the index degrades selection, having no accuracy data. Anthropic has published some, as an admission against interest: on MCP evaluations over large tool libraries, Opus 4 moved from 49% to 74%, and Opus 4.5 from 79.5% to 88.1%, when tools were *removed* from context and searched for on demand. Fifty-eight tools across five connectors consume roughly 55K tokens before a conversation starts; Anthropic reports 134K internally before optimisation. The failure mode they name is wrong tool selection, worst when names are similar -- structurally the same finding as the 1.00-similarity pair in section 5.2, now with an accuracy number attached to it. These are internal evaluations with no published methodology, sample size or confidence intervals; a 25-point gap is too large to be noise, but it is not a controlled result.
+
+This matters for the Fano argument in Appendix C. The bound degrades only if evidence stays bounded as N grows. Anthropic's result is the same claim from the other direction: hold evidence fixed and grow the tool set, accuracy falls; restore selective evidence and it recovers 25 points. The triggering condition is not merely plausible, it is measured.
+
+Third item, and the one that costs this paper something. Thoughtworks has published an Agentic Scope of Authority Framework, framed on what an agent is legally authorised to commit the enterprise to, and reaching for agency law to ground it. The authority problem is therefore already recognised in practitioner literature, published before this paper, by Martin Fowler's own employer. What appears to remain unoccupied is the specific move from *authority* to *bounded context as the correct unit of decomposition*; novelty is claimed for that synthesis only, and not for noticing that authority is the problem.
+
+**Numbers deliberately not used.** The widely-circulated "1.3 billion agents by 2028" is an IDC Info Snapshot sponsored by Microsoft, per Microsoft's own footnote -- a vendor-commissioned forecast, not independent analysis and not a measurement. No primary, methodologically-disclosed dataset quantifying enterprise agent duplication, abandonment or maintenance cost was found, which is why this paper argues from mechanism rather than market size. A claim that scaffolding moved task success from 42% to 78% was traced to arXiv:2607.22585, which reports 0-8 percentage points with confidence intervals including zero; it is false as attributed and is not used.
+
+One figure survived because it is self-refuting. Workday markets its Agent System of Record as a way for one team to govern thousands of AI agents. The published catalogue on the same page contains 21.
+
 ## 6. The architecture that survives
 
 ### 6.1 The headline was wrong
