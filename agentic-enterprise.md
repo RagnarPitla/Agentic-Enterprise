@@ -1079,8 +1079,8 @@ in-context prompting failed on held-out tasks.
 ## Appendix D - Corrections of record
 
 Thirty-one claims from earlier drafts were withdrawn, reversed or narrowed across four adversarial
-reviews on separate frontier models. The full table lives in the companion file `whitepaper.md`,
-section D. The categories:
+reviews on separate frontier models. The full thirty-one row table lives in the companion file
+[`corrections-full.md`](corrections-full.md), section D. The categories:
 
 | Category | Count | Most consequential |
 |---|---|---|
