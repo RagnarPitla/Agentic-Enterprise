@@ -729,5 +729,78 @@
 })();
 </script>
 
+<script>
+/* Diagram draw-on. Progressive enhancement: the markup ships visible, and
+   nothing here runs if the reader asked for reduced motion or the browser
+   lacks IntersectionObserver. */
+(function () {
+  var mq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (mq && mq.matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  var SEL = 'rect, circle, ellipse, line, path, polyline, polygon, text';
+  var STROKED = { line: 1, path: 1, polyline: 1, polygon: 1 };
+  var REPLAY_ICON = '<svg class="replay-icon" viewBox="0 0 24 24" width="13" height="13"'
+    + ' aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 4a8 8 0 1 1-7.5'
+    + ' 5.2 1 1 0 1 1 1.87.7A6 6 0 1 0 12 6V2.7a.3.3 0 0 0-.5-.22L8 5.5l3.5 3a.3.3 0 0 0'
+    + ' .5-.22V6Z"/></svg>';
+
+  var diagrams = Array.prototype.filter.call(
+    document.querySelectorAll('svg[role="img"]'),
+    function (svg) { return svg.querySelectorAll(SEL).length >= 4; }
+  );
+  if (!diagrams.length) return;
+
+  diagrams.forEach(function (svg) {
+    var kids = Array.prototype.filter.call(svg.querySelectorAll(SEL), function (el) {
+      return !el.closest('defs, clipPath, mask');
+    });
+
+    kids.forEach(function (el, i) {
+      el.style.setProperty('--i', i);
+      var tag = el.tagName.toLowerCase();
+
+      /* An authored dash pattern is load-bearing in these diagrams: dashed
+         means specified but not built. Animating it would overwrite the dash
+         array and erase that distinction, so those elements only fade. */
+      if (STROKED[tag] && !el.getAttribute('stroke-dasharray')) {
+        var len = 0;
+        try { len = el.getTotalLength(); } catch (e) { len = 0; }
+        if (len > 1 && len < 20000) {
+          el.style.setProperty('--len', len);
+          el.style.strokeDasharray = len;
+          el.setAttribute('data-anim', 'draw');
+          return;
+        }
+      }
+      el.setAttribute('data-anim', 'fade');
+    });
+
+    svg.classList.add('anim');
+
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'replay';
+    button.innerHTML = REPLAY_ICON + '<span>Replay</span>';
+    button.addEventListener('click', function () {
+      svg.classList.remove('in-view');
+      void svg.getBoundingClientRect();
+      svg.classList.add('in-view');
+    });
+    svg.insertAdjacentElement('afterend', button);
+  });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in-view');
+      io.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+
+  diagrams.forEach(function (svg) { io.observe(svg); });
+})();
+</script>
+
 </body>
 </html>

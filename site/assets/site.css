@@ -249,7 +249,7 @@ section:last-of-type { border-bottom: none; }
 .sub-heading { font-size: 19px; font-weight: 600; letter-spacing: -.01em; margin: 40px 0 10px; }
 .microcopy .sep { margin: 0 8px; opacity: .5; }
 
-.hero-art { display: flex; align-items: center; justify-content: center; }
+.hero-art { display: flex; flex-wrap: wrap; row-gap: 14px; align-items: center; justify-content: center; }
 .hero-art svg { width: 100%; height: auto; }
 
 /* ------------------------------------------------------------------ badges */
@@ -654,4 +654,60 @@ section:last-of-type { border-bottom: none; }
   clip-path: inset(50%);
   overflow: hidden;
   white-space: nowrap;
+}
+
+/* ------------------------------------------------ diagram draw-on animation
+ *
+ * Progressive enhancement. The static HTML renders fully visible; the .anim
+ * class is only ever added by JS, and only when the reader has not asked for
+ * reduced motion. No JS, or reduced motion, means no hidden state to recover
+ * from.
+ *
+ * Elements carrying an authored stroke-dasharray are never converted to a
+ * draw-on. In these diagrams a dashed stroke means "specified but not built"
+ * (ladder levels 3-5, the provisional-write state), so overwriting the dash
+ * pattern to animate it would erase the argument the picture is making.
+ */
+
+svg.anim [data-anim] { opacity: 0; }
+svg.anim [data-anim="draw"] { opacity: 1; stroke-dashoffset: var(--len, 0); }
+
+svg.anim.in-view [data-anim="fade"] {
+  animation: diagram-fade 420ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: calc(var(--i, 0) * 26ms);
+}
+svg.anim.in-view [data-anim="draw"] {
+  animation: diagram-draw 620ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: calc(var(--i, 0) * 26ms);
+}
+
+@keyframes diagram-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes diagram-draw {
+  from { stroke-dashoffset: var(--len, 0); opacity: 1; }
+  to   { stroke-dashoffset: 0; opacity: 1; }
+}
+
+.replay {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--muted-foreground);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.replay:hover { color: var(--foreground); border-color: var(--muted-foreground); }
+.replay:focus-visible { outline: 2px solid var(--foreground); outline-offset: 2px; }
+.replay .replay-icon { transition: transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1); }
+.replay:hover .replay-icon { transform: rotate(-180deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  .replay, .replay .replay-icon { transition: none; }
 }
