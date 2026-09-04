@@ -40,8 +40,8 @@
     <nav class="site-nav" aria-label="Primary">
       <ul>
         <li><a href="#how-it-works">The argument</a></li>
-        <li><a href="#proof">Evidence</a></li>
-        <li><a href="#outside">Sources</a></li>
+        <li><a href="#outside">Evidence</a></li>
+        <li><a href="#proof">The census</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="https://github.com/RagnarPitla/Agentic-Enterprise">GitHub</a></li>
         <li><a class="cta" href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/agentic-enterprise.md">Read the paper</a></li>
@@ -111,25 +111,117 @@
     </div>
   </section>
 
-  <!-- ========================================================== NOTE -->
-  <section class="note-band" id="note" aria-labelledby="note-heading">
+  <!-- ================================================ FIGURE: THE EMPTY BOX -->
+  <section class="prose-section" id="record" aria-labelledby="record-heading">
     <div class="container">
-      <h2 class="note-eyebrow" id="note-heading">How this started</h2>
-      <blockquote class="epigraph">
-        <p class="lead">People assume anything this long came out of a machine. Here is how it actually went.</p>
-        <p>The thought came first, and it came from the work. I kept meeting companies that were
-          deploying more agents and getting no more agentic, and I could not put it down.</p>
-        <p>Then I pointed five models at my own draft and told them to break it. They did. One found
-          a number that cannot exist. One took my central claim apart using three citations I had to
-          go and read before I would accept it. One found two hypotheses in the paper contradicting
-          each other. Forty-one corrections are logged and two of them are to my own measurements.</p>
-        <p>What I did not do is ask a model what to think. The argument is mine, the mistakes were
-          mine, and every decision about which objection to concede was mine. The corrections log is
-          on the page so you can check that yourself rather than take my word for it.</p>
-        <footer class="epigraph-attr"><strong>Ragnar Pitla</strong> &middot; Principal Program Manager, Microsoft</footer>
-      </blockquote>
+      <h2 id="record-heading">Every system of record stores its object. One does not.</h2>
+      <p>Four of these persist the thing their work is about, and any other system can go and ask them for it. The fifth was deployed alongside them and persists nothing a system can query.</p>
+      <div class="diagram">
+        <svg class="fig-wide" viewBox="0 0 900 412" role="img" aria-label="Two rows of the same five systems: ERP, CRM, HR, ledger and agent. In the top row, what we assumed we had, each system sits above the object it durably stores: the order, the account, the employee, the entry, and the commitment. In the bottom row, what is actually stored, the first four are unchanged and the box under the agent is empty and drawn dashed, labelled nothing, with a note that the agent leaves a transcript in a log that nothing queries." xmlns="http://www.w3.org/2000/svg">
+        <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+          <text x="40" y="24" font-size="11" letter-spacing="0.08em" fill="#737373">WHAT WE ASSUMED WE HAD</text>
+          <rect x="40" y="38" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="114" y="61" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">ERP</text>
+          <rect x="208" y="38" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="282" y="61" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">CRM</text>
+          <rect x="376" y="38" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="450" y="61" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">HR</text>
+          <rect x="544" y="38" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="618" y="61" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">LEDGER</text>
+          <rect x="712" y="38" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="786" y="61" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">AGENT</text>
+          <line x1="114" y1="74" x2="114" y2="92" stroke="#e5e5e5" stroke-width="1.4"/>
+          <rect x="40" y="92" width="148" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="114" y="120" text-anchor="middle" font-size="12" fill="#0a0a0a">the order</text>
+          <line x1="282" y1="74" x2="282" y2="92" stroke="#e5e5e5" stroke-width="1.4"/>
+          <rect x="208" y="92" width="148" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="282" y="120" text-anchor="middle" font-size="12" fill="#0a0a0a">the account</text>
+          <line x1="450" y1="74" x2="450" y2="92" stroke="#e5e5e5" stroke-width="1.4"/>
+          <rect x="376" y="92" width="148" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="450" y="120" text-anchor="middle" font-size="12" fill="#0a0a0a">the employee</text>
+          <line x1="618" y1="74" x2="618" y2="92" stroke="#e5e5e5" stroke-width="1.4"/>
+          <rect x="544" y="92" width="148" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="618" y="120" text-anchor="middle" font-size="12" fill="#0a0a0a">the entry</text>
+          <line x1="786" y1="74" x2="786" y2="92" stroke="#e5e5e5" stroke-width="1.4"/>
+          <rect x="712" y="92" width="148" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="786" y="120" text-anchor="middle" font-size="12" fill="#0a0a0a">the commitment</text>
+          <line x1="40" y1="170" x2="860" y2="170" stroke="#e5e5e5" stroke-width="1.2" stroke-dasharray="3 4"/>
+          <text x="40" y="206" font-size="11" letter-spacing="0.08em" fill="#737373">WHAT IS ACTUALLY STORED</text>
+          <rect x="40" y="220" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="114" y="243" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">ERP</text>
+          <rect x="208" y="220" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="282" y="243" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">CRM</text>
+          <rect x="376" y="220" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="450" y="243" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">HR</text>
+          <rect x="544" y="220" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="618" y="243" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">LEDGER</text>
+          <rect x="712" y="220" width="148" height="36" rx="3" fill="#0a0a0a"/>
+          <text x="786" y="243" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#ffffff">AGENT</text>
+          <line x1="114" y1="256" x2="114" y2="274" stroke="#e5e5e5" stroke-width="1.4"/>
+          <rect x="40" y="274" width="148" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="114" y="302" text-anchor="middle" font-size="12" fill="#0a0a0a">the order</text>
+          <line x1="282" y1="256" x2="282" y2="274" stroke="#e5e5e5" stroke-width="1.4"/>
+          <rect x="208" y="274" width="148" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="282" y="302" text-anchor="middle" font-size="12" fill="#0a0a0a">the account</text>
+          <line x1="450" y1="256" x2="450" y2="274" stroke="#e5e5e5" stroke-width="1.4"/>
+          <rect x="376" y="274" width="148" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="450" y="302" text-anchor="middle" font-size="12" fill="#0a0a0a">the employee</text>
+          <line x1="618" y1="256" x2="618" y2="274" stroke="#e5e5e5" stroke-width="1.4"/>
+          <rect x="544" y="274" width="148" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="618" y="302" text-anchor="middle" font-size="12" fill="#0a0a0a">the entry</text>
+          <line x1="786" y1="256" x2="786" y2="274" stroke="#737373" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <rect x="712" y="274" width="148" height="44" rx="3" fill="#ffffff" stroke="#737373" stroke-width="2.4" stroke-dasharray="5 4"/>
+          <text x="786" y="302" text-anchor="middle" font-size="12" fill="#737373">nothing</text>
+          <text x="786" y="336" text-anchor="middle" font-size="10" fill="#737373">a transcript, in a log,</text>
+          <text x="786" y="350" text-anchor="middle" font-size="10" fill="#737373">that nothing queries</text>
+          <text x="40" y="384" font-size="11.5" fill="#0a0a0a">Four systems of record, and one that is not.</text>
+          <text x="40" y="400" font-size="10" fill="#737373">Everything else on this page follows from the empty box.</text>
+        </g>
+        </svg>
+        <svg class="fig-narrow" viewBox="0 0 360 330" role="img" aria-label="Two rows of the same five systems: ERP, CRM, HR, ledger and agent. In the top row, what we assumed we had, each system sits above the object it durably stores: the order, the account, the employee, the entry, and the commitment. In the bottom row, what is actually stored, the first four are unchanged and the box under the agent is empty and drawn dashed, labelled nothing, with a note that the agent leaves a transcript in a log that nothing queries." xmlns="http://www.w3.org/2000/svg">
+        <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+          <text x="164" y="14" text-anchor="middle" font-size="9.5" letter-spacing="0.08em" fill="#737373">ASSUMED</text>
+          <text x="292" y="14" text-anchor="middle" font-size="9.5" letter-spacing="0.08em" fill="#737373">STORED</text>
+          <text x="0" y="52" font-size="10.5" font-weight="700" letter-spacing="0.06em" fill="#0a0a0a">ERP</text>
+          <rect x="104" y="28" width="120" height="38" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="164" y="52" text-anchor="middle" font-size="11" fill="#0a0a0a">the order</text>
+          <rect x="232" y="28" width="120" height="38" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="292" y="52" text-anchor="middle" font-size="11" fill="#0a0a0a">the order</text>
+          <text x="0" y="104" font-size="10.5" font-weight="700" letter-spacing="0.06em" fill="#0a0a0a">CRM</text>
+          <rect x="104" y="80" width="120" height="38" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="164" y="104" text-anchor="middle" font-size="11" fill="#0a0a0a">the account</text>
+          <rect x="232" y="80" width="120" height="38" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="292" y="104" text-anchor="middle" font-size="11" fill="#0a0a0a">the account</text>
+          <text x="0" y="156" font-size="10.5" font-weight="700" letter-spacing="0.06em" fill="#0a0a0a">HR</text>
+          <rect x="104" y="132" width="120" height="38" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="164" y="156" text-anchor="middle" font-size="11" fill="#0a0a0a">the employee</text>
+          <rect x="232" y="132" width="120" height="38" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="292" y="156" text-anchor="middle" font-size="11" fill="#0a0a0a">the employee</text>
+          <text x="0" y="208" font-size="10.5" font-weight="700" letter-spacing="0.06em" fill="#0a0a0a">LEDGER</text>
+          <rect x="104" y="184" width="120" height="38" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="164" y="208" text-anchor="middle" font-size="11" fill="#0a0a0a">the entry</text>
+          <rect x="232" y="184" width="120" height="38" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="292" y="208" text-anchor="middle" font-size="11" fill="#0a0a0a">the entry</text>
+          <text x="0" y="260" font-size="10.5" font-weight="700" letter-spacing="0.06em" fill="#0a0a0a">AGENT</text>
+          <rect x="104" y="236" width="120" height="38" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="164" y="260" text-anchor="middle" font-size="11" fill="#0a0a0a">the commitment</text>
+          <rect x="232" y="236" width="120" height="38" rx="3" fill="#ffffff" stroke="#737373" stroke-width="2.4" stroke-dasharray="5 4"/>
+          <text x="292" y="260" text-anchor="middle" font-size="11" fill="#737373">nothing</text>
+          <text x="0" y="306" font-size="10" fill="#0a0a0a">Four systems of record, and one that is not.</text>
+          <text x="0" y="321" font-size="9" fill="#737373">The agent leaves a transcript that nothing queries.</text>
+        </g>
+        </svg>
+      </div>
     </div>
   </section>
+
+  <!-- ========================================================== NOTE -->
+  <div class="note-band" id="note">
+    <div class="container">
+      <p class="note-oneline">This started as a thought I could not put down, not a prompt.
+        <a href="#why">Why I wrote it, and how</a></p>
+    </div>
+  </div>
 
   <!-- ========================================================== PROBLEM -->
   <section class="prose-section" id="problem" aria-labelledby="problem-heading">
@@ -248,11 +340,65 @@
     </div>
   </section>
 
+  <!-- =================================================== EXTERNAL EVIDENCE -->
+  <section class="prose-section" id="outside" aria-labelledby="outside-heading">
+    <div class="container">
+      <h2 id="outside-heading">What already happened, and what the vendors published</h2>
+      <p>The claims carrying the most weight here were checked against primary sources, and the ones that failed that check were dropped rather than softened.</p>
+
+      <h3>An agent has already committed a company to a promise its systems did not hold</h3>
+      <p>The paper's central mechanism is not hypothetical. It has been litigated. In <em>Moffatt v. Air Canada</em>, 2024 BCCRT 149, a chatbot told a passenger he could apply for a bereavement fare retroactively. The airline's own policy page said the opposite. The tribunal found for the passenger in negligent misrepresentation and awarded CAD 812.02.</p>
+      <p>Two paragraphs of that decision are load-bearing. At paragraph 27 the tribunal notes the airline's position amounts to treating the chatbot as a separate legal entity responsible for its own actions, and calls it a remarkable submission. At paragraph 28 it goes further, and this is the part that matters here: the airline could not explain why the page titled "Bereavement travel" was inherently more trustworthy than its chatbot, or why a customer should have to check one part of a website against another.</p>
+      <p><strong>That is the grounding fix failing in court.</strong> Air Canada had the authoritative page, and had linked to it. The commitment was still formed at the conversational surface, and the law declined to privilege the system of record over it. Anyone whose plan is "ground the agent and add a disclaimer" should read paragraph 28 before relying on it.</p>
+      <p>Worth stating the limits: this is a small-claims tribunal, the sum is CAD 812.02, it is not binding precedent, and the tribunal never used the words authority, ownership or system of record. It is one documented instance, not a trend.</p>
+
+      <h3>Six vendor catalogues, and the segment that is missing from all of them</h3>
+      <p>The paper's diagnostic claim is that enterprise agents are named after systems of record rather than units of work. That was an observation about naming until it was checked against the vendors' own published catalogues.</p>
+      <table class="data-table">
+        <caption>Published agent catalogues, and what each one uses as its top-level division</caption>
+        <thead><tr><th>Vendor</th><th>Agents listed</th><th>Catalogue is divided by</th></tr></thead>
+        <tbody>
+          <tr><td>Oracle Fusion</td><td>207, counted from the vendor tables</td><td>Pillar, then application module</td></tr>
+          <tr><td>ServiceNow</td><td>100+, no public global list</td><td>Product bundle, then connector</td></tr>
+          <tr><td>Microsoft Dynamics 365</td><td>about 25</td><td>D365 application</td></tr>
+          <tr><td>Salesforce</td><td>about 21</td><td>Cloud and industry</td></tr>
+          <tr><td>Workday</td><td>21</td><td>Department, then buying persona: CHRO, CFO, CIO</td></tr>
+          <tr><td>SAP</td><td>about 18</td><td>Business function, SAP's own word, then product</td></tr>
+        </tbody>
+      </table>
+      <p>The negative finding is the one that carries weight, because it is the one that could have come out the other way. Across all six catalogues, no segment is named quote-to-cash, order-to-delivery, or issue-to-resolution. Not one vendor organises its agents by a flow that crosses two systems. Workday goes furthest and indexes agents by which C-suite officer buys them, which is departmental segmentation written directly into the data model.</p>
+      <p>Oracle supplies the clearest instances: Payables Agent, Ledger Agent, Cash Processing Agent, Timecard Upload Assistant, Purchase Order Status Advisor. Each is named for the screen, table or module it operates on. In 207 agents the closest thing to a process name is Opportunity-to-Quote Guide, and that segment sits inside CX Sales rather than crossing anything. ServiceNow's connector agents are the purest form: Kubernetes Pod Management AI Agent, Jenkins Build Management AI Agent, named after the integration rather than the work.</p>
+      <p>Honest limits: only the Oracle 207 and the Workday 21 are exact counts from enumerated tables. The rest are approximate, ServiceNow publishes no global list, and I did not personally recount all of them. The pattern does not depend on the precision of the totals, and the absent segment is a stronger signal than any of the counts.</p>
+
+      <h3>The selection tax is measured, first-party, and larger than I assumed</h3>
+      <p>My census could show that a capability index costs tokens. It could not show that the index degrades selection, because I had no accuracy data. Anthropic has published some, and it is an admission against interest.</p>
+      <table class="data-table">
+        <caption>Anthropic, "Advanced tool use", on removing tools from context rather than adding them</caption>
+        <thead><tr><th>Measure</th><th>Reported</th></tr></thead>
+        <tbody>
+          <tr><td>Opus 4 accuracy on MCP evaluations, large tool libraries</td><td>49% without tool search, 74% with</td></tr>
+          <tr><td>Opus 4.5, same evaluation</td><td>79.5% without, 88.1% with</td></tr>
+          <tr><td>58 tools across five connectors</td><td>about 55K tokens before the conversation starts</td></tr>
+          <tr><td>Tool definitions at Anthropic before optimisation</td><td>134K tokens</td></tr>
+        </tbody>
+      </table>
+      <p>The failure mode they name is the one my census found structurally: wrong tool selection, worst when names are similar. My library's worst pair scores an exact 1.00. So the degradation is not a theoretical consequence of having many options. It is a measured consequence of having many options described badly, which is a different problem with a different fix.</p>
+      <p>These are internal evaluations with no published methodology, sample size or confidence intervals. A 25-point gap is too large to be noise, but it is not a controlled result and should not be cited as one.</p>
+
+      <h3>Somebody reached the authority argument before I did</h3>
+      <p>Thoughtworks published an Agentic Scope of Authority Framework, framed around what an agent is legally authorised to commit the enterprise to, and reached for agency law to do it. That is the same problem this paper is about, arrived at by a different route and published first. The synthesis here is different, but the observation is not novel and it would be dishonest to present it as such.</p>
+
+      <h3>Numbers I decided not to use</h3>
+      <p>The figure circulating as "1.3 billion AI agents by 2028" is an IDC info snapshot sponsored by Microsoft, which its own footnote states. It is a vendor-commissioned forecast, so it is not independent analyst work and it is not a measurement of anything. I found no primary, methodologically-disclosed dataset quantifying enterprise agent duplication, abandonment or maintenance cost, which is why the argument here rests on a mechanism rather than a market size.</p>
+      <p>One number was too good to leave out, because it is self-refuting. Workday markets its Agent System of Record as a way for one team to govern thousands of AI agents. The published catalogue on the same page contains 21.</p>
+    </div>
+  </section>
+
   <!-- ============================================================ PROOF -->
   <section class="band" id="proof" aria-labelledby="proof-heading">
     <div class="container">
       <h2 id="proof-heading">What one machine actually contained</h2>
-      <p class="lede">Rather than cite a survey, I counted what was on the machine in front of me. One developer, two agent runtimes, a skill library that nobody planned to grow this large. Every number below comes from one script in the repository, and that script asserts six controls before it prints anything.</p>
+      <p class="lede">This illustrates the mechanism. It is not a survey of the industry, and nothing in it is evidence about any vendor. I counted what was on the machine in front of me. One developer, two agent runtimes, a skill library that nobody planned to grow this large. Every number below comes from one script in the repository, and that script asserts six controls before it prints anything.</p>
       <div class="proof-grid">
         <div class="demo-panel">
           <p class="demo-label">Census, verified</p>
@@ -313,60 +459,6 @@
 <span class="comment">copilot symlinks         : 175 total, 19 broken</span>
 <span class="comment">claude  symlinks         : 180 total, 19 broken</span></pre>
       </div>
-    </div>
-  </section>
-
-  <!-- =================================================== EXTERNAL EVIDENCE -->
-  <section class="prose-section" id="outside" aria-labelledby="outside-heading">
-    <div class="container">
-      <h2 id="outside-heading">What holds up outside my own machine</h2>
-      <p>A census of one laptop is evidence about skill libraries, not about enterprises. So the claims that matter most were checked against primary sources, and the ones that failed that check were dropped rather than softened.</p>
-
-      <h3>An agent has already committed a company to a promise its systems did not hold</h3>
-      <p>The paper's central mechanism is not hypothetical. It has been litigated. In <em>Moffatt v. Air Canada</em>, 2024 BCCRT 149, a chatbot told a passenger he could apply for a bereavement fare retroactively. The airline's own policy page said the opposite. The tribunal found for the passenger in negligent misrepresentation and awarded CAD 812.02.</p>
-      <p>Two paragraphs of that decision are load-bearing. At paragraph 27 the tribunal notes the airline's position amounts to treating the chatbot as a separate legal entity responsible for its own actions, and calls it a remarkable submission. At paragraph 28 it goes further, and this is the part that matters here: the airline could not explain why the page titled "Bereavement travel" was inherently more trustworthy than its chatbot, or why a customer should have to check one part of a website against another.</p>
-      <p><strong>That is the grounding fix failing in court.</strong> Air Canada had the authoritative page, and had linked to it. The commitment was still formed at the conversational surface, and the law declined to privilege the system of record over it. Anyone whose plan is "ground the agent and add a disclaimer" should read paragraph 28 before relying on it.</p>
-      <p>Worth stating the limits: this is a small-claims tribunal, the sum is CAD 812.02, it is not binding precedent, and the tribunal never used the words authority, ownership or system of record. It is one documented instance, not a trend.</p>
-
-      <h3>Six vendor catalogues, and the segment that is missing from all of them</h3>
-      <p>The paper's diagnostic claim is that enterprise agents are named after systems of record rather than units of work. That was an observation about naming until it was checked against the vendors' own published catalogues.</p>
-      <table class="data-table">
-        <caption>Published agent catalogues, and what each one uses as its top-level division</caption>
-        <thead><tr><th>Vendor</th><th>Agents listed</th><th>Catalogue is divided by</th></tr></thead>
-        <tbody>
-          <tr><td>Oracle Fusion</td><td>207, counted from the vendor tables</td><td>Pillar, then application module</td></tr>
-          <tr><td>ServiceNow</td><td>100+, no public global list</td><td>Product bundle, then connector</td></tr>
-          <tr><td>Microsoft Dynamics 365</td><td>about 25</td><td>D365 application</td></tr>
-          <tr><td>Salesforce</td><td>about 21</td><td>Cloud and industry</td></tr>
-          <tr><td>Workday</td><td>21</td><td>Department, then buying persona: CHRO, CFO, CIO</td></tr>
-          <tr><td>SAP</td><td>about 18</td><td>Business function, SAP's own word, then product</td></tr>
-        </tbody>
-      </table>
-      <p>The negative finding is the one that carries weight, because it is the one that could have come out the other way. Across all six catalogues, no segment is named quote-to-cash, order-to-delivery, or issue-to-resolution. Not one vendor organises its agents by a flow that crosses two systems. Workday goes furthest and indexes agents by which C-suite officer buys them, which is departmental segmentation written directly into the data model.</p>
-      <p>Oracle supplies the clearest instances: Payables Agent, Ledger Agent, Cash Processing Agent, Timecard Upload Assistant, Purchase Order Status Advisor. Each is named for the screen, table or module it operates on. In 207 agents the closest thing to a process name is Opportunity-to-Quote Guide, and that segment sits inside CX Sales rather than crossing anything. ServiceNow's connector agents are the purest form: Kubernetes Pod Management AI Agent, Jenkins Build Management AI Agent, named after the integration rather than the work.</p>
-      <p>Honest limits: only the Oracle 207 and the Workday 21 are exact counts from enumerated tables. The rest are approximate, ServiceNow publishes no global list, and I did not personally recount all of them. The pattern does not depend on the precision of the totals, and the absent segment is a stronger signal than any of the counts.</p>
-
-      <h3>The selection tax is measured, first-party, and larger than I assumed</h3>
-      <p>My census could show that a capability index costs tokens. It could not show that the index degrades selection, because I had no accuracy data. Anthropic has published some, and it is an admission against interest.</p>
-      <table class="data-table">
-        <caption>Anthropic, "Advanced tool use", on removing tools from context rather than adding them</caption>
-        <thead><tr><th>Measure</th><th>Reported</th></tr></thead>
-        <tbody>
-          <tr><td>Opus 4 accuracy on MCP evaluations, large tool libraries</td><td>49% without tool search, 74% with</td></tr>
-          <tr><td>Opus 4.5, same evaluation</td><td>79.5% without, 88.1% with</td></tr>
-          <tr><td>58 tools across five connectors</td><td>about 55K tokens before the conversation starts</td></tr>
-          <tr><td>Tool definitions at Anthropic before optimisation</td><td>134K tokens</td></tr>
-        </tbody>
-      </table>
-      <p>The failure mode they name is the one my census found structurally: wrong tool selection, worst when names are similar. My library's worst pair scores an exact 1.00. So the degradation is not a theoretical consequence of having many options. It is a measured consequence of having many options described badly, which is a different problem with a different fix.</p>
-      <p>These are internal evaluations with no published methodology, sample size or confidence intervals. A 25-point gap is too large to be noise, but it is not a controlled result and should not be cited as one.</p>
-
-      <h3>Somebody reached the authority argument before I did</h3>
-      <p>Thoughtworks published an Agentic Scope of Authority Framework, framed around what an agent is legally authorised to commit the enterprise to, and reached for agency law to do it. That is the same problem this paper is about, arrived at by a different route and published first. The synthesis here is different, but the observation is not novel and it would be dishonest to present it as such.</p>
-
-      <h3>Numbers I decided not to use</h3>
-      <p>The figure circulating as "1.3 billion AI agents by 2028" is an IDC info snapshot sponsored by Microsoft, which its own footnote states. It is a vendor-commissioned forecast, so it is not independent analyst work and it is not a measurement of anything. I found no primary, methodologically-disclosed dataset quantifying enterprise agent duplication, abandonment or maintenance cost, which is why the argument here rests on a mechanism rather than a market size.</p>
-      <p>One number was too good to leave out, because it is self-refuting. Workday markets its Agent System of Record as a way for one team to govern thousands of AI agents. The published catalogue on the same page contains 21.</p>
     </div>
   </section>
 
@@ -661,6 +753,13 @@
           <summary>Where do people fit? Most of the discussion is about systems.<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9 6l6 6-6 6V6z"/></svg></summary>
           <div class="faq-answer"><p>Two ways, and they are connected. First, seats are not capability. Bainbridge showed in 1983 that automating the routine parts of a job raises the skill floor for whatever exceptions remain, which is precisely the role the maturity ladder assigns to a human at level three. Buying licences does not create that skill and often quietly assumes it. Second, shadow AI is the same phenomenon as agent sprawl viewed from the other end. The organisation sees uncontrolled supply; the employee sees no usable supply and routes around it. The effect is that the rate at which commitments are formed goes up while the rate at which they are captured goes down, so the employee absorbs invisible risk and the organisation learns nothing.</p></div>
         </details>
+        <details class="faq-item" id="why">
+          <summary>Why did you write this, and how much of it is machine-written?<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9 6l6 6-6 6V6z"/></svg></summary>
+          <div class="faq-answer"><p>People assume anything this long came out of a machine. It did not.</p>
+          <p>The thought came from the work. I kept meeting companies deploying more agents and getting no more agentic, and I could not put it down. Then I pointed five models at my own draft and told them to break it.</p>
+          <p>One found a number that cannot exist. One took my central claim apart with three citations I had to go and read before I would accept it. One found two hypotheses in the paper contradicting each other. Forty-one corrections are logged, two of them against my own measurements.</p>
+          <p>What I did not do is ask a model what to think. The argument is mine, so were the mistakes, and every decision about which objection to concede was mine. The log is on this page so you can check that rather than take my word for it.</p></div>
+        </details>
       </div>
     </div>
   </section>
@@ -677,7 +776,7 @@
     <p class="footer-note">Nothing here is a Microsoft position. The census covers one developer machine and generalises only as far as the argument it supports.</p>
 
     <div class="footer-author">
-      <p class="footer-bio">Ragnar Pitla is a Principal Program Manager at Microsoft, leading agent implementations in Dynamics 365 Finance and Operations, and the author of "AI-First Enterprise Architecture". He works on the half nobody demos: what breaks when an agent meets a real business.</p>
+      <p class="footer-bio">Ragnar Pitla is a Principal AI Program Manager at Microsoft, leading agent implementations in Dynamics 365 Finance and Operations, and the author of "AI-First Enterprise Architecture". He works on the half nobody demos: what breaks when an agent meets a real business.</p>
       <div class="connect-links">
         <a class="connect-link" href="https://www.linkedin.com/in/ragnarpitla" target="_blank" rel="noopener noreferrer">
           <svg class="connect-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
@@ -826,6 +925,18 @@
   }, { threshold: 0 });
 
   diagrams.forEach(function (svg) { ioIn.observe(svg); ioOut.observe(svg); });
+})();
+</script>
+
+<script>
+/* A link to a collapsed answer must open it, or it lands on a closed row. */
+(function () {
+  function openTarget() {
+    var el = document.getElementById((location.hash || '').slice(1));
+    if (el && el.tagName === 'DETAILS' && !el.open) el.open = true;
+  }
+  openTarget();
+  window.addEventListener('hashchange', openTarget);
 })();
 </script>
 

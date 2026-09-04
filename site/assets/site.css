@@ -482,14 +482,27 @@ section:last-of-type { border-bottom: none; }
   background: var(--card);
   padding: 22px 20px;
 }
-.diagram svg { display: block; width: 100%; height: auto; }
+.diagram > svg { display: block; width: 100%; height: auto; }
+.diagram > svg.fig-narrow { display: none; }
+/* The replay button is inserted after its own svg, so it has to follow it
+   out of the layout when that variant is the hidden one. */
+.diagram > svg.fig-narrow + .replay { display: none; }
 .figure figcaption { color: var(--muted-foreground); font-size: 13px; line-height: 1.65; }
 
 /* A diagram scaled to a phone shrinks its labels below legibility. Give it a
    floor and let the container scroll instead of shrinking the text. */
 @media (max-width: 620px) {
   .diagram { overflow-x: auto; }
-  .diagram svg { min-width: 460px; }
+  .diagram > svg { min-width: 460px; }
+  /* Two rows of five columns need more room than a generic diagram. */
+  /* The narrow variant stacks instead of scrolling, so the empty box
+     is never parked off the right edge where nobody scrolls to it. */
+  #record .diagram { overflow-x: visible; }
+  #record .diagram > svg { min-width: 0; }
+  .diagram > svg.fig-wide { display: none; }
+  .diagram > svg.fig-narrow { display: block; }
+  .diagram > svg.fig-wide + .replay { display: none; }
+  .diagram > svg.fig-narrow + .replay { display: inline-flex; }
 }
 .callout-n {
   display: inline-flex;
@@ -715,37 +728,21 @@ svg.anim.in-view [data-anim="draw"] {
 /* ------------------------------------------------------------ author's note */
 
 .note-band { background: var(--muted); border-bottom: 1px solid var(--border); }
-.note-band .container { max-width: 780px; padding-top: 54px; padding-bottom: 54px; }
+.note-band .container { max-width: 780px; padding-top: 22px; padding-bottom: 22px; }
 
-.note-eyebrow {
-  margin: 0 0 18px;
-  font: 700 11px/1 var(--font-mono);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
-}
-
-.epigraph {
+.note-oneline {
   margin: 0;
-  padding: 0 0 0 22px;
-  border-left: 2px solid var(--foreground);
-}
-.epigraph p {
-  margin: 0 0 15px;
-  font-size: 18px;
-  line-height: 1.62;
-  color: var(--foreground);
-}
-.epigraph p:last-of-type { margin-bottom: 20px; }
-.epigraph .lead { font-weight: 600; }
-
-.epigraph-attr {
-  font: 12px/1.5 var(--font-mono);
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--muted-foreground);
 }
-.epigraph-attr strong { color: var(--foreground); font-weight: 700; }
-
-@media (max-width: 620px) {
-  .epigraph { padding-left: 16px; }
-  .epigraph p { font-size: 16.5px; }
+.note-oneline a {
+  display: inline-block;
+  padding: 3px 0;
+  color: var(--foreground);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
+.note-oneline a:hover { text-decoration-thickness: 2px; }
