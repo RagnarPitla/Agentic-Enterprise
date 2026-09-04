@@ -547,6 +547,20 @@ This matters for the Fano argument in Appendix C. The bound degrades only if evi
 
 Third item, and the one that costs this paper something. Thoughtworks has published an Agentic Scope of Authority Framework, framed on what an agent is legally authorised to commit the enterprise to, and reaching for agency law to ground it. The authority problem is therefore already recognised in practitioner literature, published before this paper, by Martin Fowler's own employer. What appears to remain unoccupied is the specific move from *authority* to *bounded context as the correct unit of decomposition*; novelty is claimed for that synthesis only, and not for noticing that authority is the problem.
 
+**OBJECTION.** The strongest published counter-example has gone unmentioned. Anthropic reports that a multi-agent research system beat a single agent by 90.2% on an internal research eval. A paper arguing that reasoning should not fragment across agents owes that result an answer.
+
+**PROPOSITION.** It does, and the answer turns on two readings of the source rather than on rejecting it.
+
+First, what the number is. A 90.2% *relative* improvement on an internal, non-public eval, with an asymmetric comparison: Opus 4 as lead plus Sonnet 4 subagents, against a lone Opus 4. And the mechanism Anthropic gives is not specialisation. Their own variance decomposition attributes 80% of performance variance to token usage alone, with tool-call count and model choice accounting for most of the remainder. Multi-agent here is a way of buying parallel context capacity. That is a real and important result, and it is not evidence that specialists possess knowledge generalists lack.
+
+Second, what those subagents *are*. A lead agent determines at runtime how many to spawn, what each is for, and which tools each receives; they do not exist before the query and do not outlive it. That is a single agent selecting skills and harnesses per task -- the architecture this paper advocates, not the one it opposes. The target of H1 through H9 is the *static* fleet: agents registered in advance, named after systems of record, each carrying a standing grant that no individual query created and none can retire. Anthropic's system has no such registry. Nothing in it accumulates.
+
+Anthropic further documents coordination costs that read as this paper's decay modes at session scale: early versions spawned fifty subagents for simple queries, and three subagents duplicated one another on the same supply-chain question with no effective division of labour. Their stated limit deserves quoting against any general claim, this paper's included: domains requiring all agents to share context, or carrying many inter-agent dependencies, are not a good fit today.
+
+**OBJECTION, sustained in part.** That reading is fair, but it narrows the thesis again. If dynamic subagents are permitted, "one agent" is a claim about *registration and persistence*, not about process count or about cognition being unitary. The paper should say so plainly rather than retaining a title that implies more.
+
+**PROPOSITION.** Accepted. The claim is about what persists between sessions and what holds standing authority, not about how many processes run inside one.
+
 **Numbers deliberately not used.** The widely-circulated "1.3 billion agents by 2028" is an IDC Info Snapshot sponsored by Microsoft, per Microsoft's own footnote -- a vendor-commissioned forecast, not independent analysis and not a measurement. No primary, methodologically-disclosed dataset quantifying enterprise agent duplication, abandonment or maintenance cost was found, which is why this paper argues from mechanism rather than market size. A claim that scaffolding moved task success from 42% to 78% was traced to arXiv:2607.22585, which reports 0-8 percentage points with confidence intervals including zero; it is false as attributed and is not used.
 
 One figure survived because it is self-refuting. Workday markets its Agent System of Record as a way for one team to govern thousands of AI agents. The published catalogue on the same page contains 21.
