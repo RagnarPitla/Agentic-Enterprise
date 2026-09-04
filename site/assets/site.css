@@ -711,3 +711,41 @@ svg.anim.in-view [data-anim="draw"] {
 @media (prefers-reduced-motion: reduce) {
   .replay, .replay .replay-icon { transition: none; }
 }
+
+/* ------------------------------------------------------------ author's note */
+
+.note-band { background: var(--muted); border-bottom: 1px solid var(--border); }
+.note-band .container { max-width: 780px; padding-top: 54px; padding-bottom: 54px; }
+
+.note-eyebrow {
+  margin: 0 0 18px;
+  font: 700 11px/1 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.epigraph {
+  margin: 0;
+  padding: 0 0 0 22px;
+  border-left: 2px solid var(--foreground);
+}
+.epigraph p {
+  margin: 0 0 15px;
+  font-size: 18px;
+  line-height: 1.62;
+  color: var(--foreground);
+}
+.epigraph p:last-of-type { margin-bottom: 20px; }
+.epigraph .lead { font-weight: 600; }
+
+.epigraph-attr {
+  font: 12px/1.5 var(--font-mono);
+  color: var(--muted-foreground);
+}
+.epigraph-attr strong { color: var(--foreground); font-weight: 700; }
+
+@media (max-width: 620px) {
+  .epigraph { padding-left: 16px; }
+  .epigraph p { font-size: 16.5px; }
+}

@@ -111,6 +111,26 @@
     </div>
   </section>
 
+  <!-- ========================================================== NOTE -->
+  <section class="note-band" id="note" aria-labelledby="note-heading">
+    <div class="container">
+      <h2 class="note-eyebrow" id="note-heading">How this started</h2>
+      <blockquote class="epigraph">
+        <p class="lead">People assume anything this long came out of a machine. Here is how it actually went.</p>
+        <p>The thought came first, and it came from the work. I kept meeting companies that were
+          deploying more agents and getting no more agentic, and I could not put it down.</p>
+        <p>Then I pointed four models at my own draft and told them to break it. They did. One found
+          a number that cannot exist. One took my central claim apart using three citations I had to
+          go and read before I would accept it. Thirty-one corrections are logged in the paper and
+          two of them are to my own measurements.</p>
+        <p>What I did not do is ask a model what to think. The argument is mine, the mistakes were
+          mine, and every decision about which objection to concede was mine. The corrections log is
+          on the page so you can check that yourself rather than take my word for it.</p>
+        <footer class="epigraph-attr"><strong>Ragnar Pitla</strong> &middot; Principal Program Manager, Microsoft</footer>
+      </blockquote>
+    </div>
+  </section>
+
   <!-- ========================================================== PROBLEM -->
   <section class="prose-section" id="problem" aria-labelledby="problem-heading">
     <div class="container">
@@ -657,7 +677,7 @@
     <p class="footer-note">Nothing here is a Microsoft position. The census covers one developer machine and generalises only as far as the argument it supports.</p>
 
     <div class="footer-author">
-      <p class="footer-bio">Ragnar Pitla is a Principal Program Manager at Microsoft working on agents in Dynamics 365 Finance and Operations, and the author of "AI-First Enterprise Architecture". He writes about agentic ERP and what it takes to make agents first-class participants in how a business actually runs.</p>
+      <p class="footer-bio">Ragnar Pitla is a Principal Program Manager at Microsoft, leading agent implementations in Dynamics 365 Finance and Operations, and the author of "AI-First Enterprise Architecture". He works on the half nobody demos: what breaks when an agent meets a real business.</p>
       <div class="connect-links">
         <a class="connect-link" href="https://www.linkedin.com/in/ragnarpitla" target="_blank" rel="noopener noreferrer">
           <svg class="connect-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
@@ -790,15 +810,22 @@
     svg.insertAdjacentElement('afterend', button);
   });
 
-  var io = new IntersectionObserver(function (entries) {
+  /* Play when the diagram is meaningfully in view. */
+  var ioIn = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('in-view');
-      io.unobserve(entry.target);
+      if (entry.isIntersecting) entry.target.classList.add('in-view');
     });
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
 
-  diagrams.forEach(function (svg) { io.observe(svg); });
+  /* Arm it again only once it is completely off screen, so a diagram that is
+     still partly visible is never reset to opacity 0. */
+  var ioOut = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) entry.target.classList.remove('in-view');
+    });
+  }, { threshold: 0 });
+
+  diagrams.forEach(function (svg) { ioIn.observe(svg); ioOut.observe(svg); });
 })();
 </script>
 
