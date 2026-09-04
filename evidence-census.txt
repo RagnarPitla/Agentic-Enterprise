@@ -1,0 +1,13 @@
+all 6 controls passed
+
+copilot SKILL.md files   : 309    unique names: 308
+claude  SKILL.md files   : 249    unique names: 249
+shared names             : 249
+only in copilot          : 59
+only in claude           : 0
+always-loaded metadata   : 105581 chars = 22312 tokens (cl100k)
+skill bodies             : 2903213 chars
+body-to-index ratio      : 27.5x
+untouched 90d           : 196 of 309 = 63.4%
+copilot symlinks         : 175 total, 19 broken
+claude  symlinks         : 180 total, 19 broken

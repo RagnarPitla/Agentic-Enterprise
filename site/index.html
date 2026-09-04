@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic Enterprise - Why there is still no agentic enterprise, and what would have to exist</title>
+<meta name="description" content="A working paper. Enterprises deployed agents everywhere and no enterprise became agentic. The argument: agents are scoped to sessions, enterprise work is scoped to commitments, and no system stores a commitment.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Agentic Enterprise">
+<meta property="og:title" content="Agentic Enterprise - Why there is still no agentic enterprise, and what would have to exist">
+<meta property="og:description" content="A working paper. Enterprises deployed agents everywhere and no enterprise became agentic. The argument: agents are scoped to sessions, enterprise work is scoped to commitments, and no system stores a commitment.">
+<meta property="og:url" content="https://ragnarpitla.github.io/Agentic-Enterprise/">
+<meta property="og:image" content="https://ragnarpitla.github.io/Agentic-Enterprise/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Agentic Enterprise: why there is still no agentic enterprise, and what would have to exist">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agentic Enterprise - Why there is still no agentic enterprise, and what would have to exist">
+<meta name="twitter:description" content="A working paper. Enterprises deployed agents everywhere and no enterprise became agentic. The argument: agents are scoped to sessions, enterprise work is scoped to commitments, and no system stores a commitment.">
+<meta name="twitter:image" content="https://ragnarpitla.github.io/Agentic-Enterprise/assets/og-card.png">
+<meta name="twitter:image:alt" content="Agentic Enterprise: why there is still no agentic enterprise, and what would have to exist">
+
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="#top">
+      <img class="wordmark-icon" src="./assets/favicon.svg" alt="" width="22" height="22">
+      <span class="mark">Agentic Enterprise</span>
+      <span class="strap">working paper</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#how-it-works">The argument</a></li>
+        <li><a href="#proof">Evidence</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://github.com/RagnarPitla/Agentic-Enterprise">GitHub</a></li>
+        <li><a class="cta" href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/agentic-enterprise.md">Read the paper</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- ============================================================= HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-copy">
+        <p class="hero-kicker badge"><img src="./assets/favicon.svg" alt="" width="12" height="12">Working paper</p>
+        <h1 id="hero-heading">Why is there still no agentic enterprise? Yet.</h1>
+        <p class="sub-line">Every large company now runs agents. None of them runs agentically. The gap is not model quality and not adoption. It is that an agent is scoped to a session, enterprise work is scoped to a commitment, and no system in the building stores a commitment as a durable object.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/agentic-enterprise.md">Read the paper</a>
+          <a class="btn ghost" href="https://github.com/RagnarPitla/Agentic-Enterprise">View the code on GitHub</a>
+        </div>
+        <p class="microcopy">
+          Nine falsifiable hypotheses<span class="sep">*</span>Four adversarial model reviews<span class="sep">*</span>31 logged corrections, two of them to my own numbers
+        </p>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 460 300" role="img" aria-label="On the left, six agents each sit inside its own walled box, and none of the boxes touch. On the right, a single line of work starts in one box and crosses every wall to reach the end. The agents are drawn inside the boundaries; the work is drawn across them." xmlns="http://www.w3.org/2000/svg">
+          <text x="12" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#737373" letter-spacing="0.08em">WHAT WE DEPLOYED</text>
+          <g stroke="#e5e5e5" stroke-width="1.4" fill="#ffffff">
+            <rect x="12" y="38" width="62" height="52" rx="4"/>
+            <rect x="84" y="38" width="62" height="52" rx="4"/>
+            <rect x="156" y="38" width="62" height="52" rx="4"/>
+            <rect x="12" y="100" width="62" height="52" rx="4"/>
+            <rect x="84" y="100" width="62" height="52" rx="4"/>
+            <rect x="156" y="100" width="62" height="52" rx="4"/>
+          </g>
+          <g fill="#0a0a0a">
+            <circle cx="43" cy="64" r="7"/>
+            <circle cx="115" cy="64" r="7"/>
+            <circle cx="187" cy="64" r="7"/>
+            <circle cx="43" cy="126" r="7"/>
+            <circle cx="115" cy="126" r="7"/>
+            <circle cx="187" cy="126" r="7"/>
+          </g>
+          <text x="12" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#737373">each fluent inside one system</text>
+          <text x="12" y="192" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#737373">of record. none of them touch.</text>
+
+          <line x1="240" y1="30" x2="240" y2="200" stroke="#e5e5e5" stroke-width="1.4" stroke-dasharray="3 4"/>
+
+          <text x="262" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#737373" letter-spacing="0.08em">WHAT THE WORK IS</text>
+          <g stroke="#e5e5e5" stroke-width="1.4" fill="#ffffff">
+            <rect x="262" y="38" width="52" height="114" rx="4"/>
+            <rect x="322" y="38" width="52" height="114" rx="4"/>
+            <rect x="382" y="38" width="52" height="114" rx="4"/>
+          </g>
+          <path d="M274 132 C 300 132, 296 66, 322 66 C 348 66, 344 120, 370 120 C 396 120, 396 72, 422 72" fill="none" stroke="#0a0a0a" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="274" cy="132" r="5" fill="#0a0a0a"/>
+          <circle cx="422" cy="72" r="5" fill="#ffffff" stroke="#0a0a0a" stroke-width="2.4"/>
+          <text x="262" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#737373">one obligation, weeks long,</text>
+          <text x="262" y="192" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#737373">crossing every wall on the left.</text>
+
+          <text x="12" y="240" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#0a0a0a">The agents were drawn inside the boundaries.</text>
+          <text x="12" y="258" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#0a0a0a">The work was always drawn across them.</text>
+          <text x="12" y="282" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#737373">This is Conway's Law, arriving through procurement.</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== PROBLEM -->
+  <section class="prose-section" id="problem" aria-labelledby="problem-heading">
+    <div class="container">
+      <h2 id="problem-heading">The money was spent. The capability did not arrive.</h2>
+      <p>Three answers get offered when someone asks why. Each one is testable, and each one fails.</p>
+      <p><strong>The models are not good enough yet.</strong> This predicts that capability improvements convert into enterprise autonomy. Between 2023 and 2026 benchmark scores moved a great deal. The share of multi-week, multi-system enterprise processes running without a human in the loop did not move with them. A theory whose central variable improved by an order of magnitude while the outcome stayed flat has a problem.</p>
+      <p><strong>Enterprises are slow.</strong> This predicts a lag, and lag predicts leaders. Cloud had leaders inside three years. Nobody can name the company that runs its order-to-cash agentically today. A diffusion curve with no leading edge is not a diffusion curve.</p>
+      <p><strong>Governance is blocking it.</strong> This predicts that the constraint is permission. But the teams with the most permission, the AI platform groups running their own tenancy, have not produced it either. They hit the same wall the regulated teams hit, without the regulator.</p>
+      <p>All three answers share a shape: they say the thing is on its way and something is delaying it. The fourth answer is less comfortable and it is the one this paper argues. <strong>The missing piece is not a better agent. It is an object that does not exist.</strong></p>
+      <p>An agent's memory ends when its session ends. Enterprise work does not end when a session ends. A purchase commitment made on a call in March is fulfilled by four systems over eleven weeks, and the only durable record of it is a sentence in someone's inbox. The agent was never the bottleneck. The <em>commitment</em> was never written down in a form any system could act on.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================== HOW IT WORKS -->
+  <section id="how-it-works" aria-labelledby="how-heading">
+    <div class="container">
+      <h2 id="how-heading">The argument</h2>
+      <p class="lede">The paper is written as a disputation. A proposition seat states each claim at full strength; an objection seat attacks it at full strength. Where the objection wins, the claim is cut rather than softened. Three disagreements are left standing because neither seat could close them.</p>
+      <ol class="steps">
+        <li>
+          <h3>Define agentic so it can be false</h3>
+          <p>Not "uses AI". A process is agentic at level N if it completes across N system boundaries without a human re-entering the loop to carry state between them. Five levels, measurable from logs, with the human role named at each rung. Most production deployments sit at level 1.</p>
+        </li>
+        <li>
+          <h3>State nine hypotheses with kill conditions</h3>
+          <p>Each hypothesis names the observation that would end it. H2 predicts a cliff at the first boundary crossing, not a slope. If the measured curve is smooth, the boundary claim is wrong and the paper says so.</p>
+        </li>
+        <li>
+          <h3>Measure what is actually measurable</h3>
+          <p>A census of 309 agent skills on one working machine. Load cost in real tokens, duplication, decay, dead links. The uncomfortable numbers are printed alongside the flattering ones.</p>
+        </li>
+        <li>
+          <h3>Run the objections at full strength</h3>
+          <p>Four frontier models were pointed at the draft with instructions to break it. Six claims died outright. Two of my own measurements turned out to be wrong, one of them arithmetically impossible, and both are now in the paper as evidence about the method.</p>
+        </li>
+        <li>
+          <h3>Name what would have to be built</h3>
+          <p>Six phases, each of which has to pay for itself before the next one is funded, because a migration that only pays off at the end never gets funded past phase two.</p>
+        </li>
+      </ol>
+      <p class="steps-loop">
+        <svg class="loop-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 4a8 8 0 1 1-7.5 5.2 1 1 0 1 1 1.87.7A6 6 0 1 0 12 6V2.7a.3.3 0 0 0-.5-.22L8 5.5l3.5 3a.3.3 0 0 0 .5-.22V6a6 6 0 0 1 0 0V4Z"/></svg>
+        The strongest objection to the whole paper is still open, and it is stated as such: the economics may simply not justify any of this.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================= JOBS -->
+  <section id="jobs" aria-labelledby="jobs-heading">
+    <div class="container">
+      <h2 id="jobs-heading">The three claims worth arguing with</h2>
+      <p class="lede">If you disagree with the paper, these are the places to push.</p>
+      <ul class="jobs">
+        <li>
+          <span class="job-kicker">Scope</span>
+          <h3>Every generation of this craft has been session-scoped</h3>
+          <p>Prompt engineering, harness engineering, loop engineering, context engineering. Four generations, one shared assumption: the unit of work fits in a session. Enterprise obligations run for weeks and outlive every session that touches them. The next unit is not a better session. It is a durable decision.</p>
+        </li>
+        <li>
+          <span class="job-kicker">Sprawl</span>
+          <h3>There is no garbage collector, and there cannot be one</h3>
+          <p>The census found four distinct decay modes and no reclaim path for any of them. The library reached 309 entries because nothing is ever removed. You cannot collect a capability registry, because collection needs a reachability graph, and reachability needs durable objectives. Sprawl and non-agentic-ness are the same missing object showing two symptoms.</p>
+        </li>
+        <li>
+          <span class="job-kicker">Concentration</span>
+          <h3>You did not choose hundreds of agents</h3>
+          <p>You chose hundreds of software vendors, and the agents arrived attached to them. Procurement is a real lever against twenty vendors and no lever at all against the tail of four hundred. This is the finding that broke the paper's original conclusion, and the revised one is weaker and more specific because of it.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =================================================== FIGURE: LADDER -->
+  <section class="prose-section" id="ladder" aria-labelledby="ladder-heading">
+    <div class="container">
+      <h2 id="ladder-heading">Five levels, and where the deployments actually sit</h2>
+      <p>The word "agentic" is doing too much work in every vendor deck, so the paper replaces it with a rung number that can be read off a log. The distinguishing question at each level is not how clever the model is. It is who carries state across the gap.</p>
+      <svg viewBox="0 0 730 336" role="img" aria-label="A five-rung ladder rising left to right. Level one, assisted: a human carries state between every step, and this is where nearly all production deployments sit. Level two, delegated: the agent completes one task inside one system in one session. Level three, bounded autonomy: the agent crosses two or three boundaries and a human handles exceptions. Level four, process autonomy: a multi-week process across many systems completes with humans only on exception. Level five, portfolio autonomy: the organisation reallocates its own commitments. A solid bar marks levels one and two as populated today; levels three through five are drawn dashed and empty." xmlns="http://www.w3.org/2000/svg">
+        <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+          <text x="40" y="28" font-size="10.5" fill="#737373">The gap between L2 and L3 is not a difficulty gradient. It is the first boundary crossing.</text>
+          <line x1="40" y1="272" x2="712" y2="272" stroke="#e5e5e5" stroke-width="1.2"/>
+
+          <rect x="40" y="214" width="128" height="58" rx="3" fill="#0a0a0a"/>
+          <text x="52" y="236" font-size="11" fill="#ffffff">L1 assisted</text>
+          <text x="52" y="254" font-size="9.5" fill="#e5e5e5">human carries state</text>
+
+          <rect x="176" y="184" width="128" height="88" rx="3" fill="#0a0a0a"/>
+          <text x="188" y="206" font-size="11" fill="#ffffff">L2 delegated</text>
+          <text x="188" y="224" font-size="9.5" fill="#e5e5e5">one task, one</text>
+          <text x="188" y="238" font-size="9.5" fill="#e5e5e5">system, one session</text>
+
+          <rect x="312" y="148" width="128" height="124" rx="3" fill="#ffffff" stroke="#737373" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text x="324" y="170" font-size="11" fill="#0a0a0a">L3 bounded</text>
+          <text x="324" y="188" font-size="9.5" fill="#737373">2-3 boundaries,</text>
+          <text x="324" y="202" font-size="9.5" fill="#737373">human on exception</text>
+
+          <rect x="448" y="106" width="128" height="166" rx="3" fill="#ffffff" stroke="#737373" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text x="460" y="128" font-size="11" fill="#0a0a0a">L4 process</text>
+          <text x="460" y="146" font-size="9.5" fill="#737373">weeks long, many</text>
+          <text x="460" y="160" font-size="9.5" fill="#737373">systems, exception</text>
+          <text x="460" y="174" font-size="9.5" fill="#737373">handling only</text>
+
+          <rect x="584" y="58" width="128" height="214" rx="3" fill="#ffffff" stroke="#737373" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text x="596" y="80" font-size="11" fill="#0a0a0a">L5 portfolio</text>
+          <text x="596" y="98" font-size="9.5" fill="#737373">the organisation</text>
+          <text x="596" y="112" font-size="9.5" fill="#737373">reallocates its own</text>
+          <text x="596" y="126" font-size="9.5" fill="#737373">commitments</text>
+
+          <line x1="40" y1="300" x2="304" y2="300" stroke="#0a0a0a" stroke-width="2.4"/>
+          <text x="40" y="320" font-size="10" fill="#0a0a0a">populated today</text>
+          <line x1="312" y1="300" x2="712" y2="300" stroke="#737373" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text x="312" y="320" font-size="10" fill="#737373">named in decks, absent from logs</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============================================================ PROOF -->
+  <section class="band" id="proof" aria-labelledby="proof-heading">
+    <div class="container">
+      <h2 id="proof-heading">What one machine actually contained</h2>
+      <p class="lede">Rather than cite a survey, I counted what was on the machine in front of me. One developer, two agent runtimes, a skill library that nobody planned to grow this large. Every number below comes from one script in the repository, and that script asserts six controls before it prints anything.</p>
+      <div class="proof-grid">
+        <div class="demo-panel">
+          <p class="demo-label">Census, verified</p>
+          <p class="demo-intro">Re-run it yourself. The script is <code>census.py</code> and it refuses to print if any of its six controls fail.</p>
+          <ul class="spec-list">
+            <li class="is-main">
+              <span class="key">309</span>
+              <span class="name">skill files on one machine<span class="tag">308 unique</span></span>
+              <span class="meta">one name duplicated</span>
+            </li>
+            <li>
+              <span class="key">22,312</span>
+              <span class="name">tokens of metadata loaded before any work starts</span>
+              <span class="meta">real cl100k count</span>
+            </li>
+            <li>
+              <span class="key">27.5x</span>
+              <span class="name">ratio of bodies to the index that routes to them</span>
+              <span class="meta">2.9M chars</span>
+            </li>
+            <li>
+              <span class="key">63.4%</span>
+              <span class="name">untouched in 90 days<span class="tag">196 of 309</span></span>
+              <span class="meta">mtime, not invocation</span>
+            </li>
+            <li>
+              <span class="key">19 + 19</span>
+              <span class="name">broken symlinks, the same count on each side</span>
+              <span class="meta">nothing reclaims them</span>
+            </li>
+            <li>
+              <span class="key">0</span>
+              <span class="name">skills unique to the second runtime</span>
+              <span class="meta">a strict subset</span>
+            </li>
+          </ul>
+        </div>
+        <div class="proof-copy">
+          <p>The last row is the one that matters. The second runtime holds 249 skills and every single one also exists in the first. That is not convergence. Nothing merged them and nothing compared them; one directory was copied and then diverged in one direction only.</p>
+          <p>The worst duplicate pair scores 1.00 on similarity, and inspecting it shows why: a dated backup folder is being loaded as a live skill. No process noticed. No process could have, because there is no record of which objective any skill was created to serve, so there is nothing to check it against.</p>
+          <p><strong>Two of my own numbers were wrong.</strong> The first draft claimed 274 shared names out of a set containing 249, which is arithmetically impossible. It survived three frontier-model reviews that all read the prose, and was caught by a fourth that re-ran the count. That failure is now part of the argument rather than quietly fixed: a reviewer who reads your reasoning cannot audit your arithmetic.</p>
+        </div>
+      </div>
+
+      <div class="terminal">
+<pre><span class="prompt">$</span> python3 census.py
+<span class="comment">all 6 controls passed</span>
+
+<span class="comment">copilot SKILL.md files   : 309    unique names: 308</span>
+<span class="comment">claude  SKILL.md files   : 249    unique names: 249</span>
+<span class="comment">shared names             : 249</span>
+<span class="comment">only in copilot          : 59</span>
+<span class="comment">only in claude           : 0</span>
+<span class="comment">always-loaded metadata   : 105581 chars = 22312 tokens (cl100k)</span>
+<span class="comment">skill bodies             : 2903213 chars</span>
+<span class="comment">body-to-index ratio      : 27.5x</span>
+<span class="comment">untouched 90d            : 196 of 309 = 63.4%</span>
+<span class="comment">copilot symlinks         : 175 total, 19 broken</span>
+<span class="comment">claude  symlinks         : 180 total, 19 broken</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================== FIGURE: DECAY -->
+  <section class="prose-section" id="decay" aria-labelledby="decay-heading">
+    <div class="container">
+      <h2 id="decay-heading">Four ways the library rots, and no reclaim path for any of them</h2>
+      <p>This is the finding I did not expect to make. Every mature runtime that accumulates objects has something that removes them: reference counting, mark and sweep, a TTL, a retention policy. A capability registry has none, and the reason is structural rather than lazy.</p>
+      <svg viewBox="0 0 720 250" role="img" aria-label="Four decay modes shown as columns, each with a measured count and an empty reclaim slot beneath it. Disuse: 196 of 309 untouched for ninety days, no collector. Dangling: nineteen broken symlinks on each side, no collector. Supersession: the worst duplicate pair scores one point zero zero, a dated backup folder loaded as a live skill, no collector. Divergence: zero skills unique to the second runtime, meaning one side is a strict subset of the other, no collector. A caption underneath reads: collection needs a reachability graph, reachability needs durable objectives, and objectives are not stored anywhere." xmlns="http://www.w3.org/2000/svg">
+        <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+          <g>
+            <rect x="20" y="30" width="152" height="74" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+            <text x="32" y="52" font-size="10.5" fill="#737373" letter-spacing="0.06em">DISUSE</text>
+            <text x="32" y="80" font-size="21" fill="#0a0a0a">196 / 309</text>
+            <text x="32" y="96" font-size="9" fill="#737373">untouched, 90 days</text>
+
+            <rect x="188" y="30" width="152" height="74" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+            <text x="200" y="52" font-size="10.5" fill="#737373" letter-spacing="0.06em">DANGLING</text>
+            <text x="200" y="80" font-size="21" fill="#0a0a0a">19 + 19</text>
+            <text x="200" y="96" font-size="9" fill="#737373">broken symlinks</text>
+
+            <rect x="356" y="30" width="152" height="74" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+            <text x="368" y="52" font-size="10.5" fill="#737373" letter-spacing="0.06em">SUPERSESSION</text>
+            <text x="368" y="80" font-size="21" fill="#0a0a0a">1.00</text>
+            <text x="368" y="96" font-size="9" fill="#737373">backup loaded as live</text>
+
+            <rect x="524" y="30" width="152" height="74" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+            <text x="536" y="52" font-size="10.5" fill="#737373" letter-spacing="0.06em">DIVERGENCE</text>
+            <text x="536" y="80" font-size="21" fill="#0a0a0a">0</text>
+            <text x="536" y="96" font-size="9" fill="#737373">unique to side two</text>
+          </g>
+
+          <g stroke="#737373" stroke-width="1.2" stroke-dasharray="3 3">
+            <line x1="96" y1="104" x2="96" y2="134"/>
+            <line x1="264" y1="104" x2="264" y2="134"/>
+            <line x1="432" y1="104" x2="432" y2="134"/>
+            <line x1="600" y1="104" x2="600" y2="134"/>
+          </g>
+
+          <g fill="#ffffff" stroke="#737373" stroke-width="1.4" stroke-dasharray="4 4">
+            <rect x="20" y="134" width="152" height="38" rx="3"/>
+            <rect x="188" y="134" width="152" height="38" rx="3"/>
+            <rect x="356" y="134" width="152" height="38" rx="3"/>
+            <rect x="524" y="134" width="152" height="38" rx="3"/>
+          </g>
+          <g font-size="10" fill="#737373">
+            <text x="55" y="158">no collector</text>
+            <text x="223" y="158">no collector</text>
+            <text x="391" y="158">no collector</text>
+            <text x="559" y="158">no collector</text>
+          </g>
+
+          <text x="20" y="206" font-size="11.5" fill="#0a0a0a">Collection needs a reachability graph. Reachability needs durable objectives.</text>
+          <text x="20" y="226" font-size="11.5" fill="#0a0a0a">Objectives are not stored anywhere, so nothing is ever provably unreachable.</text>
+          <text x="20" y="244" font-size="10" fill="#737373">The library reached 309 because nothing is ever removed, not because 309 things were needed.</text>
+        </g>
+      </svg>
+      <p>There is a cheap test for this, and the paper recommends running it. Delete everything with zero invocations and zero inbound references for two consecutive quarters. If nobody in the organisation is willing to run that deletion, the unwillingness is itself the finding: it means nobody can say what any of it was for.</p>
+    </div>
+  </section>
+
+  <!-- ================================================ FIGURE: CONCENTRATION -->
+  <section class="prose-section band" id="concentration" aria-labelledby="concentration-heading">
+    <div class="container">
+      <h2 id="concentration-heading">Commitments form in a narrow place and are fulfilled in a wide one</h2>
+      <p>This began as an objection to my own thesis and ended up as the strongest argument for it. If an enterprise runs hundreds of software vendors, a proposal that depends on instrumenting all of them is dead on arrival. Procurement can lean on twenty vendors. It has no lever at all against the tail of four hundred.</p>
+      <p>Then the layers separate, and the picture changes.</p>
+      <svg viewBox="0 0 720 300" role="img" aria-label="Three horizontal layers with an arrow running down the left margin from top to bottom. The top layer, where commitments are uttered, is narrow: essentially two communication suites carry the meetings, mail and chat where obligations are made. The middle layer, reasoning, is also narrow: roughly five model vendors, concentrating further each year. The bottom layer, state, is wide: thirteen small boxes standing for hundreds of systems of record where the obligation is eventually fulfilled, fragmenting, with no procurement lever reaching the tail. The caption reads: capture at formation needs two parties at the table, not four hundred." xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ah-conc" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto">
+            <path d="M0 0 L6 3 L0 6 z" fill="#0a0a0a"/>
+          </marker>
+        </defs>
+        <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+          <path d="M46 44 L 46 206" fill="none" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" marker-end="url(#ah-conc)"/>
+          <text x="30" y="128" font-size="9.5" fill="#737373" transform="rotate(-90 30 128)" text-anchor="middle">formed here, fulfilled there</text>
+
+          <text x="88" y="24" font-size="10.5" fill="#737373">WHERE COMMITMENTS ARE MADE</text>
+          <rect x="88" y="34" width="216" height="48" rx="3" fill="#0a0a0a"/>
+          <text x="100" y="55" font-size="11" fill="#ffffff">utterance layer</text>
+          <text x="100" y="72" font-size="9.5" fill="#e5e5e5">2 suites carry nearly all of it</text>
+          <text x="322" y="55" font-size="10" fill="#737373">meetings, mail, chat.</text>
+          <text x="322" y="72" font-size="10" fill="#737373">already concentrated, by nobody's design.</text>
+
+          <text x="88" y="116" font-size="10.5" fill="#737373">WHERE THEY ARE REASONED ABOUT</text>
+          <rect x="88" y="126" width="216" height="40" rx="3" fill="#0a0a0a"/>
+          <text x="100" y="151" font-size="11" fill="#ffffff">reasoning: about 5 vendors</text>
+          <text x="322" y="151" font-size="10" fill="#737373">concentrating further each year.</text>
+
+          <text x="88" y="200" font-size="10.5" fill="#737373">WHERE THEY ARE FULFILLED</text>
+          <g fill="#ffffff" stroke="#e5e5e5" stroke-width="1.2">
+            <rect x="88" y="210" width="38" height="26" rx="2"/><rect x="132" y="210" width="38" height="26" rx="2"/>
+            <rect x="176" y="210" width="38" height="26" rx="2"/><rect x="220" y="210" width="38" height="26" rx="2"/>
+            <rect x="264" y="210" width="38" height="26" rx="2"/><rect x="308" y="210" width="38" height="26" rx="2"/>
+            <rect x="352" y="210" width="38" height="26" rx="2"/><rect x="396" y="210" width="38" height="26" rx="2"/>
+            <rect x="440" y="210" width="38" height="26" rx="2"/><rect x="484" y="210" width="38" height="26" rx="2"/>
+            <rect x="528" y="210" width="38" height="26" rx="2"/><rect x="572" y="210" width="38" height="26" rx="2"/>
+            <rect x="616" y="210" width="38" height="26" rx="2"/>
+          </g>
+          <text x="666" y="228" font-size="13" fill="#737373">...</text>
+          <text x="88" y="256" font-size="10" fill="#737373">state layer: hundreds of systems of record, fragmenting.</text>
+          <text x="88" y="270" font-size="10" fill="#737373">no procurement lever reaches the tail.</text>
+
+          <text x="88" y="294" font-size="11.5" fill="#0a0a0a">Capture at formation needs two parties at the table, not four hundred.</text>
+        </g>
+      </svg>
+      <p>That is the whole move. Instrumenting fulfilment is impossible; instrumenting formation is a conversation with two vendors. It is also the second independent argument arriving at the same design: the origin of a commitment is reachable and its destination is not.</p>
+      <p>The objection to this is conceded in the paper rather than answered. Putting capture in the communication layer hands the commitment graph to the communication vendor, which is a real concentration of power. So the ask has to be narrower than the capability: <strong>exportable, in a format the enterprise owns, or it is not worth having.</strong></p>
+    </div>
+  </section>
+
+  <!-- =============================================== FIGURE: THE PENCIL -->
+  <section class="prose-section" id="pencil" aria-labelledby="pencil-heading">
+    <div class="container">
+      <h2 id="pencil-heading">Enterprise systems write in ink. Commitments are made in pencil.</h2>
+      <p>The objection seat scored a real hit here early on: commitment representation is not missing from the literature. ISO 15944-4 models it. Revenue recognition standards mandate performance obligations. So the claim "nobody has thought about this" is false and was cut.</p>
+      <p>What survives is narrower and harder to dismiss. Those models represent a commitment <em>once it is confirmed</em>. The interesting state is the one before that, and no system of record has a slot for it.</p>
+      <svg viewBox="0 0 720 250" role="img" aria-label="A state diagram in two rows. The top row shows what a commitment actually does: something said on a call becomes a provisional commitment, drawn as a dashed box that holds an expiry and decays on its own if untouched. From there two paths lead out, one solid to confirmed, which writes to the system of record, and one dashed to expired, which evaporates and leaves an audit trace. The bottom row shows what every system of record offers instead: the same utterance leads straight to a hard write or nothing, with no provisional state in between, so the obligation waits in someone's inbox." xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ah-solid" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0a0a0a"/></marker>
+          <marker id="ah-grey" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#737373"/></marker>
+        </defs>
+        <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+          <text x="20" y="22" font-size="10.5" fill="#737373">WHAT A COMMITMENT ACTUALLY DOES</text>
+
+          <rect x="20" y="38" width="140" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="32" y="58" font-size="10.5" fill="#0a0a0a">said on a call</text>
+          <text x="32" y="74" font-size="9" fill="#737373">an obligation exists</text>
+
+          <path d="M166 60 L 194 60" stroke="#0a0a0a" stroke-width="1.8" marker-end="url(#ah-solid)"/>
+
+          <rect x="200" y="34" width="170" height="52" rx="3" fill="#ffffff" stroke="#737373" stroke-width="1.6" stroke-dasharray="5 4"/>
+          <text x="212" y="54" font-size="10.5" fill="#0a0a0a">provisional</text>
+          <text x="212" y="69" font-size="9" fill="#737373">holds an expiry. decays</text>
+          <text x="212" y="81" font-size="9" fill="#737373">on its own if untouched.</text>
+
+          <path d="M376 50 L 424 34" stroke="#0a0a0a" stroke-width="1.8" marker-end="url(#ah-solid)"/>
+          <path d="M376 72 L 424 96" stroke="#737373" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ah-grey)"/>
+
+          <rect x="430" y="12" width="180" height="44" rx="3" fill="#0a0a0a"/>
+          <text x="442" y="32" font-size="10.5" fill="#ffffff">confirmed</text>
+          <text x="442" y="48" font-size="9" fill="#e5e5e5">writes to the record</text>
+
+          <rect x="430" y="80" width="180" height="44" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="442" y="100" font-size="10.5" fill="#737373">expired</text>
+          <text x="442" y="116" font-size="9" fill="#737373">evaporates, leaves a trace</text>
+
+          <line x1="20" y1="150" x2="700" y2="150" stroke="#e5e5e5" stroke-width="1.2"/>
+
+          <text x="20" y="178" font-size="10.5" fill="#737373">WHAT EVERY SYSTEM OF RECORD OFFERS</text>
+          <rect x="20" y="192" width="140" height="40" rx="3" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.4"/>
+          <text x="32" y="216" font-size="10.5" fill="#0a0a0a">said on a call</text>
+          <path d="M166 212 L 244 212" stroke="#0a0a0a" stroke-width="1.8" marker-end="url(#ah-solid)"/>
+          <rect x="250" y="192" width="180" height="40" rx="3" fill="#0a0a0a"/>
+          <text x="262" y="216" font-size="10.5" fill="#ffffff">hard write, or nothing</text>
+          <text x="446" y="208" font-size="10" fill="#737373">no provisional state exists, so</text>
+          <text x="446" y="222" font-size="10" fill="#737373">it waits in someone's inbox.</text>
+        </g>
+      </svg>
+      <p>A provisional write is not a softer write. It is a write with an expiry and a named owner, which is a different object with different failure modes. The paper works through one of them honestly and cannot close it: a provisional write is a denial-of-service surface, because anything that can be created cheaply and must be reconciled by someone can be created in bulk.</p>
+    </div>
+  </section>
+
+  <!-- ======================================================= COMPARISON -->
+  <section id="different" aria-labelledby="different-heading">
+    <div class="container">
+      <h2 id="different-heading">Where this sits against the obvious alternatives</h2>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h3>Compared with multi-agent orchestration</h3>
+          <p>Orchestration frameworks genuinely solve routing, retries and tool selection inside a run. They are good at what they do. The boundary condition is the word "inside": the orchestrator's memory ends with the orchestration. An eleven-week obligation outlives every orchestrator that touches it, so the framework never gets to be the thing that remembers.</p>
+        </div>
+        <div class="compare-card">
+          <h3>Compared with process mining and workflow</h3>
+          <p>Workflow engines are the closest existing thing, and they already store long-lived state with owners and deadlines. The boundary condition is that they start from a modelled process. A commitment made in a sentence on a call has no process instance to attach to, which is exactly the case that leaks.</p>
+        </div>
+        <div class="compare-card">
+          <h3>Compared with "just wait for better models"</h3>
+          <p>This is the most likely objection to be right, and the paper cannot fully refute it. A sufficiently strong model with a long enough context could carry the state a commitment object would carry. What it could not do is make that state auditable, transferable between vendors, or survive the model being switched off.</p>
+        </div>
+        <div class="compare-card">
+          <h3>Compared with one universal agent</h3>
+          <p>The paper argues against its own title here. A single generalist that emulates every specialist is not obviously cheaper than the specialists, and the reviewers were right that capability parity is the wrong outcome variable. The claim that survives is about cognition and state, not about consolidating headcount into one process.</p>
+        </div>
+      </div>
+      <p class="compare-close"><strong>The positive claim, once:</strong> capture the commitment where it is made, give it an expiry and an owner, and let any agent read it. The agents you already own become useful the moment there is something durable for them to be about.</p>
+    </div>
+  </section>
+
+  <!-- ============================================= FIGURE: THE EXPERIMENT -->
+  <section class="prose-section band" id="experiment" aria-labelledby="experiment-heading">
+    <div class="container">
+      <h2 id="experiment-heading">The experiment that would kill it</h2>
+      <p>A thesis that cannot lose is not worth reading, so here is the shape of the result that ends this one. Take a real process and measure unassisted completion as a function of how many system boundaries it has to cross. The two hypotheses make visibly different predictions.</p>
+      <svg viewBox="0 0 720 335" role="img" aria-label="Two predicted curves on the same axes. The horizontal axis is the number of system boundaries crossed, from zero to four. The vertical axis is the share of runs completing without a human. The boundary hypothesis, drawn solid, stays high through zero and one boundary, then drops sharply at the first crossing and stays low. The difficulty hypothesis, drawn dashed, declines smoothly and gradually across all four boundaries. A callout at the drop reads: the cliff, this is the prediction, because state has to survive a handoff that no system is holding it across. The caption states that two control arms are specified so a cliff cannot be manufactured by choosing harder tasks at the crossings." xmlns="http://www.w3.org/2000/svg">
+        <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+          <line x1="70" y1="40" x2="70" y2="230" stroke="#737373" stroke-width="1.2"/>
+          <line x1="70" y1="230" x2="640" y2="230" stroke="#737373" stroke-width="1.2"/>
+          <text x="70" y="250" font-size="9.5" fill="#737373" text-anchor="middle">0</text>
+          <text x="212" y="250" font-size="9.5" fill="#737373" text-anchor="middle">1</text>
+          <text x="354" y="250" font-size="9.5" fill="#737373" text-anchor="middle">2</text>
+          <text x="496" y="250" font-size="9.5" fill="#737373" text-anchor="middle">3</text>
+          <text x="638" y="250" font-size="9.5" fill="#737373" text-anchor="middle">4</text>
+          <text x="355" y="272" font-size="10" fill="#737373" text-anchor="middle">system boundaries crossed</text>
+          <text x="60" y="44" font-size="9.5" fill="#737373" text-anchor="end">100%</text>
+          <text x="60" y="234" font-size="9.5" fill="#737373" text-anchor="end">0%</text>
+          <text x="24" y="140" font-size="9.5" fill="#737373" transform="rotate(-90 24 140)" text-anchor="middle">runs completing unassisted</text>
+
+          <path d="M70 58 L 212 70 L 214 196 L 354 206 L 496 212 L 638 216" fill="none" stroke="#0a0a0a" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M70 62 C 212 86, 354 116, 496 152 C 560 170, 600 184, 638 196" fill="none" stroke="#737373" stroke-width="1.8" stroke-dasharray="5 4"/>
+
+          <line x1="300" y1="44" x2="332" y2="44" stroke="#0a0a0a" stroke-width="2.4"/>
+          <text x="342" y="48" font-size="9.5" fill="#0a0a0a">boundary hypothesis: a cliff at the first crossing</text>
+          <line x1="300" y1="66" x2="332" y2="66" stroke="#737373" stroke-width="1.8" stroke-dasharray="5 4"/>
+          <text x="342" y="70" font-size="9.5" fill="#737373">difficulty hypothesis: a smooth decline</text>
+
+          <line x1="213" y1="76" x2="213" y2="230" stroke="#e5e5e5" stroke-width="1.2" stroke-dasharray="3 4"/>
+          <text x="224" y="148" font-size="10" fill="#0a0a0a">the cliff. this is the prediction.</text>
+          <text x="224" y="164" font-size="9.5" fill="#737373">state has to survive a handoff that</text>
+          <text x="224" y="178" font-size="9.5" fill="#737373">no system is holding it across.</text>
+          <text x="70" y="302" font-size="11" fill="#0a0a0a">If the measured curve is the dashed one, the boundary claim is wrong.</text>
+          <text x="70" y="322" font-size="10" fill="#737373">Two control arms are specified so a cliff cannot be manufactured by choosing harder tasks.</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ======================================================= ASSURANCES -->
+  <section class="prose-section" id="assurances" aria-labelledby="assurances-heading">
+    <div class="container">
+      <h2 id="assurances-heading">How to read it without taking my word for anything</h2>
+      <p>The paper is opinionated and it is also a record of being wrong in public. Every claim carries one of five epistemic labels, so you can see at a glance whether you are reading a measurement, a citation, or an argument I am making up.</p>
+      <ul class="assurance-list">
+        <li>
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8V6.4l6-2.2Z"/></svg>
+          Every number traces to a script in the repository, and every script asserts controls before it prints
+        </li>
+        <li>
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8V6.4l6-2.2Z"/></svg>
+          Thirty-one corrections are logged with what was claimed, what was wrong, and who caught it
+        </li>
+        <li>
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8V6.4l6-2.2Z"/></svg>
+          Six claims from the first draft were killed outright rather than softened, and the paper names them
+        </li>
+        <li>
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8V6.4l6-2.2Z"/></svg>
+          Three disagreements between the two seats are left unresolved, because pretending to resolve them would be the lie
+        </li>
+        <li>
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8V6.4l6-2.2Z"/></svg>
+          Where the reviewers overreached, the paper says so and defends the original position instead of conceding to be agreeable
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================== FAQ -->
+  <section id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is this an argument for one giant agent replacing all the others?<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9 6l6 6-6 6V6z"/></svg></summary>
+          <div class="faq-answer"><p>No, and the paper argues against that framing explicitly. Consolidating a fleet into one process is an infrastructure decision with its own costs, and a reviewer correctly pointed out that a single generalist emulating N specialists is not automatically cheaper than the specialists. What the paper claims is narrower: the reasoning about a piece of work should not fragment every time the work crosses a system boundary, and the state it depends on should outlive the session that produced it. Whether that runs in one process or forty is an implementation question.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Multiple identities and multiple credentials mean multiple agents. Does that not sink the whole thing?<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9 6l6 6-6 6V6z"/></svg></summary>
+          <div class="faq-answer"><p>It sinks half of it, and the paper concedes that half. On the authority axis the objection is right: an entity that acts under many credentials is multi-agent in every sense a security review cares about, and the paper now separates the axes for exactly this reason. On the cognition axis it does not follow. A principal is not the same thing as an agent. One web server serves ten thousand users under ten thousand authorities without becoming ten thousand programs, and <code>sudo -u</code> does not fork a second mind. The authority argument constrains the design. It does not refute the claim about where reasoning fragments.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Is there an information-theoretic bound that says routing must degrade as the number of skills grows?<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9 6l6 6-6 6V6z"/></svg></summary>
+          <div class="faq-answer"><p>Fano's inequality is the usual candidate and it is worth being precise about what it says. Error probability rises with the number of options only if the evidence available to distinguish them stays bounded while the option count grows. That is a condition, not a law, and the interesting result is that the condition is currently satisfied: the census found hand-written prose descriptions, near-duplicate pairs scoring 1.00, and not a single typed precondition anywhere. So the bound supports the argument rather than refuting it, and it also names the escape route. Degradation here is contingent on the evidence being bad, and the evidence is bad because nobody ever had to make it good.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the strongest objection you could not answer?<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9 6l6 6-6 6V6z"/></svg></summary>
+          <div class="faq-answer"><p>That the economics do not justify it. The paper can show that commitments are not stored, that the storage gap explains the boundary failures, and that capture at formation is technically reachable. It cannot show that the value released exceeds the cost of building and maintaining the capture layer, the reconciliation process, and the human attention that provisional writes consume. Someone could accept every factual claim in the paper and still be right to do nothing. That objection is stated in the conclusion rather than buried, because it is the one that decides whether any of this gets built.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Why does the paper spend so long on its own mistakes?<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9 6l6 6-6 6V6z"/></svg></summary>
+          <div class="faq-answer"><p>Because the mistakes turned out to be evidence for the thesis. A parser bug silently truncated 187 descriptions while passing a non-emptiness check, which is the general lesson that a non-emptiness guard detects total blindness and never partial blindness. A headline number was arithmetically impossible and survived three separate frontier-model reviews because all three read the reasoning and none re-ran the count. A control assertion passed for the wrong reason. Each of those is a small instance of the same failure the paper describes at enterprise scale: a system that checks whether something is present, never whether it is right, because nothing durable records what it was supposed to be.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Where do people fit? Most of the discussion is about systems.<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M9 6l6 6-6 6V6z"/></svg></summary>
+          <div class="faq-answer"><p>Two ways, and they are connected. First, seats are not capability. Bainbridge showed in 1983 that automating the routine parts of a job raises the skill floor for whatever exceptions remain, which is precisely the role the maturity ladder assigns to a human at level three. Buying licences does not create that skill and often quietly assumes it. Second, shadow AI is the same phenomenon as agent sprawl viewed from the other end. The organisation sees uncontrolled supply; the employee sees no usable supply and routes around it. The effect is that the rate at which commitments are formed goes up while the rate at which they are captured goes down, so the employee absorbs invisible risk and the organisation learns nothing.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/RagnarPitla/Agentic-Enterprise">GitHub</a>
+      <a href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/agentic-enterprise.md">Read the paper</a>
+    </div>
+    <p class="footer-credits">Working paper, written as a disputation between a proposition seat and an objection seat. Four frontier models were used as adversarial reviewers; the corrections they forced are logged in Appendix D.</p>
+    <p class="footer-note">Nothing here is a Microsoft position. The census covers one developer machine and generalises only as far as the argument it supports.</p>
+
+    <div class="footer-author">
+      <p class="footer-bio">Ragnar Pitla is a Principal Program Manager at Microsoft working on agents in Dynamics 365 Finance and Operations, and the author of "AI-First Enterprise Architecture". He writes about agentic ERP and what it takes to make agents first-class participants in how a business actually runs.</p>
+      <div class="connect-links">
+        <a class="connect-link" href="https://www.linkedin.com/in/ragnarpitla" target="_blank" rel="noopener noreferrer">
+          <svg class="connect-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+          </svg>
+          Connect on LinkedIn
+        </a>
+        <a class="connect-link" href="https://rbuild.ai" target="_blank" rel="noopener noreferrer">
+          <svg class="connect-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3 12h18"/>
+              <path d="M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/>
+            </g>
+          </svg>
+          rbuild.ai
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  if (!navigator.clipboard) return;
+
+  var ICON = '<svg class="copy-icon" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false">'
+    + '<g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">'
+    + '<rect x="9" y="9" width="11" height="11" rx="2"/>'
+    + '<path d="M5 15V5a2 2 0 0 1 2-2h10"/></g></svg>';
+
+  Array.prototype.forEach.call(document.querySelectorAll('.terminal'), function (term) {
+    var pre = term.querySelector('pre');
+    if (!pre) return;
+
+    var commands = pre.textContent.split('\n')
+      .filter(function (line) { return line.slice(0, 2) === '$ '; })
+      .map(function (line) { return line.slice(2); })
+      .join('\n');
+    if (!commands) return;
+
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'copy-button';
+    button.setAttribute('aria-label', 'Copy commands to clipboard');
+    button.innerHTML = ICON + '<span class="copy-text">Copy</span>';
+
+    var label = button.querySelector('.copy-text');
+    var timer;
+
+    button.addEventListener('click', function () {
+      navigator.clipboard.writeText(commands).then(function () {
+        window.clearTimeout(timer);
+        label.textContent = 'Copied';
+        button.setAttribute('data-copied', 'true');
+        button.setAttribute('aria-label', 'Commands copied to clipboard');
+        timer = window.setTimeout(function () {
+          label.textContent = 'Copy';
+          button.removeAttribute('data-copied');
+          button.setAttribute('aria-label', 'Copy commands to clipboard');
+        }, 2000);
+      }).catch(function () {
+        label.textContent = 'Press Ctrl C';
+      });
+    });
+
+    term.appendChild(button);
+  });
+})();
+</script>
+
+</body>
+</html>
