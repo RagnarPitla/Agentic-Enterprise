@@ -5,6 +5,8 @@
 **Author:** Ragnar Pitla
 **Version:** 3.0, 4 September 2026
 **Status:** Working paper. Circulated for disagreement.
+**Companion site:** https://ragnarpitla.github.io/Agentic-Enterprise/
+**Measurement script:** [`census.py`](census.py), six controls, output in [`evidence-census.txt`](evidence-census.txt)
 
 ---
 
