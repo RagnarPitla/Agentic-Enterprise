@@ -533,7 +533,7 @@ the worst pair remains an exact 1.00. The count is withdrawn as a citable number
 
 A census of one laptop is evidence about skill libraries, not about enterprises. Claims that carry weight were checked against primary sources; those that failed were dropped rather than softened.
 
-**PROPOSITION.** The mechanism this paper describes -- an agent forming a commitment no system of record holds -- is not hypothetical. It has been litigated. In *Moffatt v. Air Canada*, 2024 BCCRT 149 (decided 14 February 2024), a chatbot told a passenger he could claim a bereavement fare retroactively; the airline's policy page said the opposite. The tribunal found negligent misrepresentation, applying *Queen v. Cognos Inc.*, 1993 CanLII 146 (SCC), and awarded CAD 812.02.
+**PROPOSITION.** First item. The mechanism this paper describes -- an agent forming a commitment no system of record holds -- is not hypothetical. It has been litigated. In *Moffatt v. Air Canada*, 2024 BCCRT 149 (decided 14 February 2024), a chatbot told a passenger he could claim a bereavement fare retroactively; the airline's policy page said the opposite. The tribunal found negligent misrepresentation, applying *Queen v. Cognos Inc.*, 1993 CanLII 146 (SCC), and awarded CAD 812.02.
 
 Paragraph 28 of the decision is the one that matters, and it is the one nobody quotes. The airline could not explain why the page titled "Bereavement travel" was inherently more trustworthy than its chatbot, nor why a customer should have to check one part of a website against another. Air Canada *had* the authoritative page and *had* linked to it (paragraph 16). The commitment was still formed at the conversational surface, and the tribunal declined to privilege the system of record over it. This is the grounding-plus-disclaimer remedy failing in court, which makes it the strongest available answer to the most common objection to H1.
 
@@ -541,11 +541,30 @@ Paragraph 28 of the decision is the one that matters, and it is the one nobody q
 
 **PROPOSITION.** Accepted, and the claim is narrowed accordingly: existence, not prevalence.
 
-Second item. Section 5.1 could show that a capability index costs tokens; it could not show the index degrades selection, having no accuracy data. Anthropic has published some, as an admission against interest: on MCP evaluations over large tool libraries, Opus 4 moved from 49% to 74%, and Opus 4.5 from 79.5% to 88.1%, when tools were *removed* from context and searched for on demand. Fifty-eight tools across five connectors consume roughly 55K tokens before a conversation starts; Anthropic reports 134K internally before optimisation. The failure mode they name is wrong tool selection, worst when names are similar -- structurally the same finding as the 1.00-similarity pair in section 5.2, now with an accuracy number attached to it. These are internal evaluations with no published methodology, sample size or confidence intervals; a 25-point gap is too large to be noise, but it is not a controlled result.
+Second item, and the one that most changes this paper's standing. The diagnostic claim in section 2 -- that enterprise agents are named after systems of record rather than units of work -- was an observation about naming. It has now been checked against six vendors' own published catalogues.
+
+| Vendor | Agents listed | Top-level division |
+|---|---|---|
+| Oracle Fusion | 207, counted from vendor tables | Pillar, then application module |
+| ServiceNow | 100+, no public global list | Product bundle, then connector |
+| Microsoft Dynamics 365 | ~25 | D365 application |
+| Salesforce | ~21 | Cloud and industry |
+| Workday | 21 | Department, then buying persona (CHRO, CFO, CIO) |
+| SAP | ~18 | Business function (SAP's own term), then product |
+
+The negative finding carries the weight, because it could have come out the other way and did not: across all six catalogues, no segment is named quote-to-cash, order-to-delivery, or issue-to-resolution. No vendor organises its agents by a flow crossing two systems. Workday indexes by which C-suite officer buys the agent, which is departmental segmentation written into the data model.
+
+Oracle supplies the clearest instances -- *Payables Agent*, *Ledger Agent*, *Cash Processing Agent*, *Timecard Upload Assistant*, *Purchase Order Status Advisor* -- each named for the screen, table or module it operates on. In 207 agents the nearest thing to a process name is *Opportunity-to-Quote Guide*, and that segment sits inside CX Sales rather than crossing a boundary. ServiceNow's connector agents are purest: *Kubernetes Pod Management AI Agent*, *Jenkins Build Management AI Agent*, named for the integration rather than the work.
+
+**OBJECTION.** Two of those six counts are exact; four are approximate, ServiceNow publishes no global list, and the proposition did not recount them. A table mixing a directly enumerated 207 with an "about 18" invites the reader to treat all six as measured.
+
+**PROPOSITION.** Correct, and the table is annotated accordingly. The argument does not rest on the totals. It rests on the segmentation, which is stated by the vendors themselves in their own page headings, and on the absent segment, which no total affects.
+
+Third item. Section 5.1 could show that a capability index costs tokens; it could not show the index degrades selection, having no accuracy data. Anthropic has published some, as an admission against interest: on MCP evaluations over large tool libraries, Opus 4 moved from 49% to 74%, and Opus 4.5 from 79.5% to 88.1%, when tools were *removed* from context and searched for on demand. Fifty-eight tools across five connectors consume roughly 55K tokens before a conversation starts; Anthropic reports 134K internally before optimisation. The failure mode they name is wrong tool selection, worst when names are similar -- structurally the same finding as the 1.00-similarity pair in section 5.2, now with an accuracy number attached to it. These are internal evaluations with no published methodology, sample size or confidence intervals; a 25-point gap is too large to be noise, but it is not a controlled result.
 
 This matters for the Fano argument in Appendix C. The bound degrades only if evidence stays bounded as N grows. Anthropic's result is the same claim from the other direction: hold evidence fixed and grow the tool set, accuracy falls; restore selective evidence and it recovers 25 points. The triggering condition is not merely plausible, it is measured.
 
-Third item, and the one that costs this paper something. Thoughtworks has published an Agentic Scope of Authority Framework, framed on what an agent is legally authorised to commit the enterprise to, and reaching for agency law to ground it. The authority problem is therefore already recognised in practitioner literature, published before this paper, by Martin Fowler's own employer. What appears to remain unoccupied is the specific move from *authority* to *bounded context as the correct unit of decomposition*; novelty is claimed for that synthesis only, and not for noticing that authority is the problem.
+Fourth item, and the one that costs this paper something. Thoughtworks has published an Agentic Scope of Authority Framework, framed on what an agent is legally authorised to commit the enterprise to, and reaching for agency law to ground it. The authority problem is therefore already recognised in practitioner literature, published before this paper, by Martin Fowler's own employer. What appears to remain unoccupied is the specific move from *authority* to *bounded context as the correct unit of decomposition*; novelty is claimed for that synthesis only, and not for noticing that authority is the problem.
 
 **OBJECTION.** The strongest published counter-example has gone unmentioned. Anthropic reports that a multi-agent research system beat a single agent by 90.2% on an internal research eval. A paper arguing that reasoning should not fragment across agents owes that result an answer.
 

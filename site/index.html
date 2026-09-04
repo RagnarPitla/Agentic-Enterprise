@@ -308,6 +308,24 @@
       <p><strong>That is the grounding fix failing in court.</strong> Air Canada had the authoritative page, and had linked to it. The commitment was still formed at the conversational surface, and the law declined to privilege the system of record over it. Anyone whose plan is "ground the agent and add a disclaimer" should read paragraph 28 before relying on it.</p>
       <p>Worth stating the limits: this is a small-claims tribunal, the sum is CAD 812.02, it is not binding precedent, and the tribunal never used the words authority, ownership or system of record. It is one documented instance, not a trend.</p>
 
+      <h3>Six vendor catalogues, and the segment that is missing from all of them</h3>
+      <p>The paper's diagnostic claim is that enterprise agents are named after systems of record rather than units of work. That was an observation about naming until it was checked against the vendors' own published catalogues.</p>
+      <table class="data-table">
+        <caption>Published agent catalogues, and what each one uses as its top-level division</caption>
+        <thead><tr><th>Vendor</th><th>Agents listed</th><th>Catalogue is divided by</th></tr></thead>
+        <tbody>
+          <tr><td>Oracle Fusion</td><td>207, counted from the vendor tables</td><td>Pillar, then application module</td></tr>
+          <tr><td>ServiceNow</td><td>100+, no public global list</td><td>Product bundle, then connector</td></tr>
+          <tr><td>Microsoft Dynamics 365</td><td>about 25</td><td>D365 application</td></tr>
+          <tr><td>Salesforce</td><td>about 21</td><td>Cloud and industry</td></tr>
+          <tr><td>Workday</td><td>21</td><td>Department, then buying persona: CHRO, CFO, CIO</td></tr>
+          <tr><td>SAP</td><td>about 18</td><td>Business function, SAP's own word, then product</td></tr>
+        </tbody>
+      </table>
+      <p>The negative finding is the one that carries weight, because it is the one that could have come out the other way. Across all six catalogues, no segment is named quote-to-cash, order-to-delivery, or issue-to-resolution. Not one vendor organises its agents by a flow that crosses two systems. Workday goes furthest and indexes agents by which C-suite officer buys them, which is departmental segmentation written directly into the data model.</p>
+      <p>Oracle supplies the clearest instances: Payables Agent, Ledger Agent, Cash Processing Agent, Timecard Upload Assistant, Purchase Order Status Advisor. Each is named for the screen, table or module it operates on. In 207 agents the closest thing to a process name is Opportunity-to-Quote Guide, and that segment sits inside CX Sales rather than crossing anything. ServiceNow's connector agents are the purest form: Kubernetes Pod Management AI Agent, Jenkins Build Management AI Agent, named after the integration rather than the work.</p>
+      <p>Honest limits: only the Oracle 207 and the Workday 21 are exact counts from enumerated tables. The rest are approximate, ServiceNow publishes no global list, and I did not personally recount all of them. The pattern does not depend on the precision of the totals, and the absent segment is a stronger signal than any of the counts.</p>
+
       <h3>The selection tax is measured, first-party, and larger than I assumed</h3>
       <p>My census could show that a capability index costs tokens. It could not show that the index degrades selection, because I had no accuracy data. Anthropic has published some, and it is an admission against interest.</p>
       <table class="data-table">
