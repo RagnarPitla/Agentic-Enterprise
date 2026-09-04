@@ -576,6 +576,10 @@ Second, what those subagents *are*. A lead agent determines at runtime how many 
 
 Anthropic further documents coordination costs that read as this paper's decay modes at session scale: early versions spawned fifty subagents for simple queries, and three subagents duplicated one another on the same supply-chain question with no effective division of labour. Their stated limit deserves quoting against any general claim, this paper's included: domains requiring all agents to share context, or carrying many inter-agent dependencies, are not a good fit today.
 
+Sharpest form of the distinction, and the one this paper will stand on. The 90.2% was produced by a system Anthropic's own appendix classifies as read-only research; its subagents are spawned per query, hold no persistent identity or permissions, and cannot coordinate with each other. That result is routinely cited in defence of agents which are build-time, department-named, separately governed and authorised to *write*. No evidence has been offered for the second configuration by Anthropic or anyone else. The two share a word and little else.
+
+The honest form of this paper's claim is therefore not "one agent, never many." It is that **parallelism across context windows is the only demonstrated justification for a second agent, and specialisation alone is not one** -- because specialisation is cheaper, more portable and more governable expressed as a skill selected at runtime than as a separately deployed, separately maintained, separately governed agent.
+
 **OBJECTION, sustained in part.** That reading is fair, but it narrows the thesis again. If dynamic subagents are permitted, "one agent" is a claim about *registration and persistence*, not about process count or about cognition being unitary. The paper should say so plainly rather than retaining a title that implies more.
 
 **PROPOSITION.** Accepted. The claim is about what persists between sessions and what holds standing authority, not about how many processes run inside one.
