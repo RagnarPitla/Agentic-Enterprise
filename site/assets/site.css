@@ -210,7 +210,31 @@ section:last-of-type { border-bottom: none; }
 }
 @media (max-width: 860px) {
   .hero .container { grid-template-columns: 1fr; }
-  .hero-art { order: -1; }
+}
+
+.evidence-note { font-size: 14px; max-width: 65ch; }
+.commitment-fields { padding-left: 22px; }
+.commitment-fields li { margin-bottom: 10px; }
+.reading-detail { margin-top: 20px; }
+.reading-detail > summary {
+  cursor: pointer;
+  font-weight: 650;
+  padding: 14px 0;
+}
+.story-steps, .diagram-stack { list-style: none; padding: 0; margin: 24px 0; }
+.story-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.story-steps li, .diagram-stack li {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+.story-steps strong, .diagram-stack strong { display: block; margin-bottom: 8px; }
+.diagram-stack { display: none; }
+@media (max-width: 760px) {
+  .story-steps { grid-template-columns: 1fr; }
+  .diagram-stack { display: grid; gap: 12px; }
+  .responsive-diagram, .responsive-diagram + .replay { display: none; }
 }
 
 .hero h1 { margin-bottom: .4em; }

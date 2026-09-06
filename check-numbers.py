@@ -16,9 +16,11 @@ import pathlib
 ROOT = pathlib.Path(__file__).resolve().parent
 PAPER = ROOT / "agentic-enterprise.md"
 SITE = ROOT / "site" / "index.html"
+README = ROOT / "README.md"
 
 paper = PAPER.read_text()
 site = SITE.read_text()
+readme = README.read_text()
 
 WORD = {
     "three": 3, "four": 4, "five": 5, "six": 6,
@@ -67,11 +69,13 @@ site_rev = nums_total(site, REVIEWS)
 paper_rev = nums_total(paper, REVIEWS)
 site_cor = nums_total(site, CORRECTIONS)
 paper_cor = nums_total(paper, CORRECTIONS)
+readme_cor = nums_total(readme, CORRECTIONS)
 
 check(len(site_rev) >= 2, f"CONTROL: review count found >=2 times on the site (got {len(site_rev)})")
 check(len(paper_rev) >= 1, f"CONTROL: review count found on the paper (got {len(paper_rev)})")
 check(len(site_cor) >= 1, f"CONTROL: corrections count found on the site (got {len(site_cor)})")
 check(len(paper_cor) >= 1, f"CONTROL: corrections count found in the paper (got {len(paper_cor)})")
+check(len(readme_cor) >= 1, f"CONTROL: corrections count found in README (got {len(readme_cor)})")
 
 # Negative control: the word map must not silently swallow an unknown token.
 check(WORD.get("seventeen") is None, "CONTROL: unmapped number words are not silently accepted")
@@ -79,6 +83,8 @@ check(WORD.get("seventeen") is None, "CONTROL: unmapped number words are not sil
 # ---- the actual invariant -------------------------------------------------
 check(len(set(site_rev)) <= 1, f"site agrees with itself on review count: {site_rev}")
 check(len(set(site_cor)) <= 1, f"site agrees with itself on corrections count: {site_cor}")
+check(len(set(paper_cor)) == 1, f"paper agrees with itself on corrections count: {paper_cor}")
+check(set(readme_cor) == set(paper_cor), f"README corrections agree with paper: {readme_cor}")
 check(
     not site_rev or not paper_rev or set(site_rev) <= set(paper_rev),
     f"site review count {set(site_rev)} appears in the paper {set(paper_rev)}",

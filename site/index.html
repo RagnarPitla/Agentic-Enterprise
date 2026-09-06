@@ -118,6 +118,11 @@
     <div class="container">
       <h2 id="commitment-heading">The practical proposal: a commitment that survives the conversation</h2>
       <p><strong>Illustrative example.</strong> A buyer agrees on a March call to purchase parts for delivery eleven weeks later. The promise must pass from the conversation to purchasing, receiving and finance without someone copying its meaning at every handoff.</p>
+      <ol class="story-steps" aria-label="The purchase promise across systems">
+        <li><strong>1. On the call</strong>A delivery promise is captured for review, with the buyer as its owner.</li>
+        <li><strong>2. In purchasing</strong>An authorised confirmation links the promise to the order instead of copying it into a new conversation.</li>
+        <li><strong>3. At delivery</strong>Receiving and finance check the same promise; a mismatch returns to its owner with the history intact.</li>
+      </ol>
       <ul class="commitment-fields">
         <li><strong>Owner:</strong> a named buyer accountable for review and follow-through.</li>
         <li><strong>Expiry:</strong> a review deadline for the provisional record, not automatic cancellation of a real obligation.</li>
@@ -315,11 +320,11 @@
   <!-- =================================================== FIGURE: LADDER -->
   <section class="prose-section" id="ladder" aria-labelledby="ladder-heading">
     <div class="container">
-      <h2 id="ladder-heading">Five levels, and where the deployments actually sit</h2>
-      <p>The word "agentic" is doing too much work in every vendor deck, so the paper replaces it with a rung number that can be read off a log. The distinguishing question at each level is not how clever the model is. It is who carries state across the gap.</p>
-      <svg viewBox="0 0 730 336" role="img" aria-label="A five-rung ladder rising left to right. Level one, assisted: a human carries state between every step, and this is where nearly all production deployments sit. Level two, delegated: the agent completes one task inside one system in one session. Level three, bounded autonomy: the agent crosses two or three boundaries and a human handles exceptions. Level four, process autonomy: a multi-week process across many systems completes with humans only on exception. Level five, portfolio autonomy: the organisation reallocates its own commitments. A solid bar marks levels one and two as populated today; levels three through five are drawn dashed and empty." xmlns="http://www.w3.org/2000/svg">
+      <h2 id="ladder-heading">Five proposed levels of autonomy</h2>
+      <p><strong>Framework, not a deployment census.</strong> The distinguishing question is who carries state across the gap. For the buyer's promise, creating an order is a task; carrying the obligation through delivery and payment is a process.</p>
+      <svg class="responsive-diagram" viewBox="0 0 730 336" role="img" aria-label="A proposed five-rung ladder. L1 assisted: a human carries state. L2 delegated: one task inside one system. L3 bounded: two or three boundaries with humans on exception. L4 process: multi-week work across many systems with humans on exception. L5 portfolio: the organisation reallocates commitments. Solid rungs denote task-level operation; dashed rungs denote the cross-boundary capabilities to test, not measured deployment shares." xmlns="http://www.w3.org/2000/svg">
         <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
-          <text x="40" y="28" font-size="10.5" fill="#737373">The gap between L2 and L3 is not a difficulty gradient. It is the first boundary crossing.</text>
+          <text x="40" y="28" font-size="10.5" fill="#737373">Hypothesis: crossing systems adds a state-handoff problem, not just task difficulty.</text>
           <line x1="40" y1="272" x2="712" y2="272" stroke="#e5e5e5" stroke-width="1.2"/>
 
           <rect x="40" y="214" width="128" height="58" rx="3" fill="#0a0a0a"/>
@@ -349,11 +354,18 @@
           <text x="596" y="126" font-size="9.5" fill="#737373">commitments</text>
 
           <line x1="40" y1="300" x2="304" y2="300" stroke="#0a0a0a" stroke-width="2.4"/>
-          <text x="40" y="320" font-size="10" fill="#0a0a0a">populated today</text>
+          <text x="40" y="320" font-size="10" fill="#0a0a0a">task-level operation</text>
           <line x1="312" y1="300" x2="712" y2="300" stroke="#737373" stroke-width="1.4" stroke-dasharray="4 4"/>
-          <text x="312" y="320" font-size="10" fill="#737373">named in decks, absent from logs</text>
+          <text x="312" y="320" font-size="10" fill="#737373">cross-boundary capabilities to test</text>
         </g>
       </svg>
+      <ol class="diagram-stack" aria-label="Five proposed levels of autonomy">
+        <li><strong>L1: Assisted</strong>A human carries state between steps.</li>
+        <li><strong>L2: Delegated</strong>An agent completes one task inside one system and session.</li>
+        <li><strong>L3: Bounded autonomy</strong>Work crosses two or three boundaries; a human handles exceptions.</li>
+        <li><strong>L4: Process autonomy</strong>A multi-week process crosses many systems, with humans on exception.</li>
+        <li><strong>L5: Portfolio autonomy</strong>The organisation reallocates its commitments.</li>
+      </ol>
     </div>
   </section>
 
@@ -361,12 +373,12 @@
   <section class="prose-section" id="outside" aria-labelledby="outside-heading">
     <div class="container">
       <h2 id="outside-heading">What already happened, and what the vendors published</h2>
-      <p>The claims carrying the most weight here were checked against primary sources, and the ones that failed that check were dropped rather than softened.</p>
+      <p><strong>Reported evidence.</strong> This section summarises the sources discussed in paper v4.0, dated <time datetime="2026-09-04">4 September 2026</time>. Catalogue totals are a dated snapshot, not live counts. Interpretations are labelled separately from what a source reports.</p>
 
       <h3>An agent has already committed a company to a promise its systems did not hold</h3>
       <p>The paper's central mechanism is not hypothetical. It has been litigated. In <em>Moffatt v. Air Canada</em>, 2024 BCCRT 149, a chatbot told a passenger he could apply for a bereavement fare retroactively. The airline's own policy page said the opposite. The tribunal found for the passenger in negligent misrepresentation and awarded CAD 812.02.</p>
       <p>Two paragraphs of that decision are load-bearing. At paragraph 27 the tribunal notes the airline's position amounts to treating the chatbot as a separate legal entity responsible for its own actions, and calls it a remarkable submission. At paragraph 28 it goes further, and this is the part that matters here: the airline could not explain why the page titled "Bereavement travel" was inherently more trustworthy than its chatbot, or why a customer should have to check one part of a website against another.</p>
-      <p><strong>That is the grounding fix failing in court.</strong> Air Canada had the authoritative page, and had linked to it. The commitment was still formed at the conversational surface, and the law declined to privilege the system of record over it. Anyone whose plan is "ground the agent and add a disclaimer" should read paragraph 28 before relying on it.</p>
+      <p><strong>Interpretation.</strong> A link to a correct policy page did not excuse the contradictory chatbot answer in this case. That illustrates the risk of inconsistent representations; it does not test whether a particular grounding architecture or commitment store would prevent the error.</p>
       <p>Worth stating the limits: this is a small-claims tribunal, the sum is CAD 812.02, it is not binding precedent, and the tribunal never used the words authority, ownership or system of record. It is one documented instance, not a trend.</p>
 
       <h3>Six vendor catalogues, and the segment that is missing from all of them</h3>
@@ -383,7 +395,7 @@
           <tr><td>SAP</td><td>about 18</td><td>Business function, SAP's own word, then product</td></tr>
         </tbody>
       </table>
-      <p>The negative finding is the one that carries weight, because it is the one that could have come out the other way. Across all six catalogues, no segment is named quote-to-cash, order-to-delivery, or issue-to-resolution. Not one vendor organises its agents by a flow that crosses two systems. Workday goes furthest and indexes agents by which C-suite officer buys them, which is departmental segmentation written directly into the data model.</p>
+      <p><strong>Interpretation of the catalogues reviewed.</strong> Their top-level groupings emphasise products and departments rather than cross-system flows. Naming is evidence about packaging, not proof that a vendor cannot execute a cross-system process.</p>
       <p>Oracle supplies the clearest instances: Payables Agent, Ledger Agent, Cash Processing Agent, Timecard Upload Assistant, Purchase Order Status Advisor. Each is named for the screen, table or module it operates on. In 207 agents the closest thing to a process name is Opportunity-to-Quote Guide, and that segment sits inside CX Sales rather than crossing anything. ServiceNow's connector agents are the purest form: Kubernetes Pod Management AI Agent, Jenkins Build Management AI Agent, named after the integration rather than the work.</p>
       <p>Honest limits: only the Oracle 207 and the Workday 21 are exact counts from enumerated tables. The rest are approximate, ServiceNow publishes no global list, and I did not personally recount all of them. The pattern does not depend on the precision of the totals, and the absent segment is a stronger signal than any of the counts.</p>
 
@@ -400,14 +412,14 @@
         </tbody>
       </table>
       <p>The failure mode they name is the one my census found structurally: wrong tool selection, worst when names are similar. My library's worst pair scores an exact 1.00. So the degradation is not a theoretical consequence of having many options. It is a measured consequence of having many options described badly, which is a different problem with a different fix.</p>
-      <p>These are internal evaluations with no published methodology, sample size or confidence intervals. A 25-point gap is too large to be noise, but it is not a controlled result and should not be cited as one.</p>
+      <p><strong>Limitations.</strong> These are vendor-reported internal evaluations. The reported gaps alone do not establish statistical significance or generalisation to enterprise work; the cited account does not provide sample sizes or confidence intervals for these figures.</p>
 
       <h3>Somebody reached the authority argument before I did</h3>
       <p>Thoughtworks published an Agentic Scope of Authority Framework, framed around what an agent is legally authorised to commit the enterprise to, and reached for agency law to do it. That is the same problem this paper is about, arrived at by a different route and published first. The synthesis here is different, but the observation is not novel and it would be dishonest to present it as such.</p>
 
       <h3>Numbers I decided not to use</h3>
       <p>The figure circulating as "1.3 billion AI agents by 2028" is an IDC info snapshot sponsored by Microsoft, which its own footnote states. It is a vendor-commissioned forecast, so it is not independent analyst work and it is not a measurement of anything. I found no primary, methodologically-disclosed dataset quantifying enterprise agent duplication, abandonment or maintenance cost, which is why the argument here rests on a mechanism rather than a market size.</p>
-      <p>One number was too good to leave out, because it is self-refuting. Workday markets its Agent System of Record as a way for one team to govern thousands of AI agents. The published catalogue on the same page contains 21.</p>
+      <p>Workday's claim about governing thousands of agents describes platform capacity, not the size of its own catalogue. Those are different quantities and should not be treated as a contradiction.</p>
     </div>
   </section>
 
@@ -415,7 +427,8 @@
   <section class="band" id="proof" aria-labelledby="proof-heading">
     <div class="container">
       <h2 id="proof-heading">What one machine actually contained</h2>
-      <p class="lede">This illustrates the mechanism. It is not a survey of the industry, and nothing in it is evidence about any vendor. I counted what was on the machine in front of me. One developer, two agent runtimes, a skill library that nobody planned to grow this large. Every number below comes from one script in the repository, and that script asserts six controls before it prints anything.</p>
+      <p class="lede"><strong>Measured: <time datetime="2026-09-04">4 September 2026</time>.</strong> One developer, two agent runtimes. This illustrates a mechanism, not an industry trend or evidence about any vendor.</p>
+      <p>Inspect the <a href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/evidence-census.txt">recorded census output</a> and <a href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/census.py">measurement script</a>. Counts describe that snapshot; running the script against your own libraries will produce different results.</p>
       <div class="proof-grid">
         <div class="demo-panel">
           <p class="demo-label">Census, verified</p>
@@ -460,6 +473,9 @@
         </div>
       </div>
 
+      <details class="reading-detail">
+        <summary>Inspect the census output and reproduction method</summary>
+        <p>The script requires Python and <code>tiktoken</code>, plus local skill libraries. See the <a href="https://github.com/RagnarPitla/Agentic-Enterprise#reproducing-the-numbers">reproduction instructions</a>. Six controls must pass before results print.</p>
       <div class="terminal">
 <pre><span class="prompt">$</span> python3 census.py
 <span class="comment">all 6 controls passed</span>
@@ -476,13 +492,14 @@
 <span class="comment">copilot symlinks         : 175 total, 19 broken</span>
 <span class="comment">claude  symlinks         : 180 total, 19 broken</span></pre>
       </div>
+      </details>
     </div>
   </section>
 
   <!-- =============================================== FIGURE: DECAY -->
   <section class="prose-section" id="decay" aria-labelledby="decay-heading">
     <div class="container">
-      <h2 id="decay-heading">Four ways the library rots, and no reclaim path for any of them</h2>
+      <h2 id="decay-heading">Four decay modes in the measured library</h2>
       <p>This is the finding I did not expect to make. Every mature runtime that accumulates objects has something that removes them: reference counting, mark and sweep, a TTL, a retention policy. A capability registry has none, and the reason is structural rather than lazy.</p>
       <svg viewBox="0 0 720 250" role="img" aria-label="Four decay modes shown as columns, each with a measured count and an empty reclaim slot beneath it. Disuse: 196 of 309 untouched for ninety days, no collector. Dangling: nineteen broken symlinks on each side, no collector. Supersession: the worst duplicate pair scores one point zero zero, a dated backup folder loaded as a live skill, no collector. Divergence: zero skills unique to the second runtime, meaning one side is a strict subset of the other, no collector. A caption underneath reads: collection needs a reachability graph, reachability needs durable objectives, and objectives are not stored anywhere." xmlns="http://www.w3.org/2000/svg">
         <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
@@ -592,7 +609,7 @@
     <div class="container">
       <h2 id="pencil-heading">Enterprise systems write in ink. Commitments are made in pencil.</h2>
       <p>The objection seat scored a real hit here early on: commitment representation is not missing from the literature. ISO 15944-4 models it. Revenue recognition standards mandate performance obligations. So the claim "nobody has thought about this" is false and was cut.</p>
-      <p>What survives is narrower and harder to dismiss. Those models represent a commitment <em>once it is confirmed</em>. The interesting state is the one before that, and no system of record has a slot for it.</p>
+      <p><strong>Proposed design.</strong> For the buyer's promise, capture the provisional state before it becomes an approved order. Existing commitment models and workflow engines are relevant precedents; the hypothesis concerns capture and transfer across systems, not the invention of persistence.</p>
       <svg viewBox="0 0 720 250" role="img" aria-label="A state diagram in two rows. The top row shows what a commitment actually does: something said on a call becomes a provisional commitment, drawn as a dashed box that holds an expiry and decays on its own if untouched. From there two paths lead out, one solid to confirmed, which writes to the system of record, and one dashed to expired, which evaporates and leaves an audit trace. The bottom row shows what every system of record offers instead: the same utterance leads straight to a hard write or nothing, with no provisional state in between, so the obligation waits in someone's inbox." xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="ah-solid" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0a0a0a"/></marker>
@@ -643,10 +660,12 @@
   <section id="different" aria-labelledby="different-heading">
     <div class="container">
       <h2 id="different-heading">Where this sits against the obvious alternatives</h2>
+      <details class="reading-detail">
+        <summary>Compare orchestration, workflows, better models and a universal agent</summary>
       <div class="compare-grid">
         <div class="compare-card">
           <h3>Compared with multi-agent orchestration</h3>
-          <p>Orchestration frameworks genuinely solve routing, retries and tool selection inside a run. They are good at what they do. The boundary condition is the word "inside": the orchestrator's memory ends with the orchestration. An eleven-week obligation outlives every orchestrator that touches it, so the framework never gets to be the thing that remembers.</p>
+          <p>Orchestration can provide routing, retries and durable execution. The question is whether it also captures the buyer's promise, authority and revisions in a record other systems can use. If an existing orchestrator already does that, a separate commitment layer may be redundant.</p>
         </div>
         <div class="compare-card">
           <h3>Compared with process mining and workflow</h3>
@@ -661,7 +680,8 @@
           <p>The paper argues against its own title here. A single generalist that emulates every specialist is not obviously cheaper than the specialists, and the reviewers were right that capability parity is the wrong outcome variable. The claim that survives is about cognition and state, not about consolidating headcount into one process.</p>
         </div>
       </div>
-      <p class="compare-close"><strong>The positive claim, once:</strong> capture the commitment where it is made, give it an expiry and an owner, and let any agent read it. The agents you already own become useful the moment there is something durable for them to be about.</p>
+      </details>
+      <p class="compare-close">For the purchase example, success means fewer lost handoffs through delivery and payment, not simply adding another store of state.</p>
     </div>
   </section>
 
@@ -669,8 +689,8 @@
   <section class="prose-section band" id="experiment" aria-labelledby="experiment-heading">
     <div class="container">
       <h2 id="experiment-heading">The experiment that would kill it</h2>
-      <p>A thesis that cannot lose is not worth reading, so here is the shape of the result that ends this one. Take a real process and measure unassisted completion as a function of how many system boundaries it has to cross. The two hypotheses make visibly different predictions.</p>
-      <svg viewBox="0 0 720 335" role="img" aria-label="Two predicted curves on the same axes. The horizontal axis is the number of system boundaries crossed, from zero to four. The vertical axis is the share of runs completing without a human. The boundary hypothesis, drawn solid, stays high through zero and one boundary, then drops sharply at the first crossing and stays low. The difficulty hypothesis, drawn dashed, declines smoothly and gradually across all four boundaries. A callout at the drop reads: the cliff, this is the prediction, because state has to survive a handoff that no system is holding it across. The caption states that two control arms are specified so a cliff cannot be manufactured by choosing harder tasks at the crossings." xmlns="http://www.w3.org/2000/svg">
+      <p><strong>Hypothesis: schematic predictions, not measured results.</strong> Use a real process such as the buyer's purchase-to-payment flow and measure unassisted completion against boundaries crossed. Match task difficulty and test the two control arms specified in the paper.</p>
+      <svg class="responsive-diagram" viewBox="0 0 720 335" role="img" aria-label="Schematic predictions, not measured results. The horizontal axis counts system boundaries crossed, zero to four; the vertical axis is unassisted completion. The solid boundary hypothesis falls sharply between zero and one boundary and stays low. The dashed difficulty hypothesis declines smoothly. A smooth measured decline would refute the cliff prediction. Two control arms address task difficulty at crossings." xmlns="http://www.w3.org/2000/svg">
         <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
           <line x1="70" y1="40" x2="70" y2="230" stroke="#737373" stroke-width="1.2"/>
           <line x1="70" y1="230" x2="640" y2="230" stroke="#737373" stroke-width="1.2"/>
@@ -684,7 +704,7 @@
           <text x="60" y="234" font-size="9.5" fill="#737373" text-anchor="end">0%</text>
           <text x="24" y="140" font-size="9.5" fill="#737373" transform="rotate(-90 24 140)" text-anchor="middle">runs completing unassisted</text>
 
-          <path d="M70 58 L 212 70 L 214 196 L 354 206 L 496 212 L 638 216" fill="none" stroke="#0a0a0a" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M70 58 L 140 64 L 142 196 L 212 200 L 354 206 L 496 212 L 638 216" fill="none" stroke="#0a0a0a" stroke-width="2.4" stroke-linejoin="round"/>
           <path d="M70 62 C 212 86, 354 116, 496 152 C 560 170, 600 184, 638 196" fill="none" stroke="#737373" stroke-width="1.8" stroke-dasharray="5 4"/>
 
           <line x1="300" y1="44" x2="332" y2="44" stroke="#0a0a0a" stroke-width="2.4"/>
@@ -692,7 +712,7 @@
           <line x1="300" y1="66" x2="332" y2="66" stroke="#737373" stroke-width="1.8" stroke-dasharray="5 4"/>
           <text x="342" y="70" font-size="9.5" fill="#737373">difficulty hypothesis: a smooth decline</text>
 
-          <line x1="213" y1="76" x2="213" y2="230" stroke="#e5e5e5" stroke-width="1.2" stroke-dasharray="3 4"/>
+          <line x1="141" y1="76" x2="141" y2="230" stroke="#e5e5e5" stroke-width="1.2" stroke-dasharray="3 4"/>
           <text x="224" y="148" font-size="10" fill="#0a0a0a">the cliff. this is the prediction.</text>
           <text x="224" y="164" font-size="9.5" fill="#737373">state has to survive a handoff that</text>
           <text x="224" y="178" font-size="9.5" fill="#737373">no system is holding it across.</text>
@@ -700,6 +720,11 @@
           <text x="70" y="322" font-size="10" fill="#737373">Two control arms are specified so a cliff cannot be manufactured by choosing harder tasks.</text>
         </g>
       </svg>
+      <ul class="diagram-stack" aria-label="Two competing predictions, not measured results">
+        <li><strong>Boundary hypothesis: a cliff</strong>Completion falls sharply from zero to one boundary crossed, then stays low.</li>
+        <li><strong>Difficulty hypothesis: a slope</strong>Completion declines gradually as the number of boundaries grows.</li>
+        <li><strong>What would refute the cliff?</strong>A smooth measured decline under matched task difficulty. The paper specifies two control arms.</li>
+      </ul>
     </div>
   </section>
 
@@ -707,11 +732,13 @@
   <section class="prose-section" id="assurances" aria-labelledby="assurances-heading">
     <div class="container">
       <h2 id="assurances-heading">How to read it without taking my word for anything</h2>
+      <details class="reading-detail">
+        <summary>Methodology, epistemic labels and adversarial review</summary>
       <p>The paper is opinionated and it is also a record of being wrong in public. Every claim carries one of five epistemic labels, so you can see at a glance whether you are reading a measurement, a citation, or an argument I am making up.</p>
       <ul class="assurance-list">
         <li>
           <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8V6.4l6-2.2Z"/></svg>
-          Every number traces to a script in the repository, and every script asserts controls before it prints
+          Census numbers trace to the measurement script; external figures are attributed to their publishers
         </li>
         <li>
           <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Zm0 2.2 6 2.2v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8V6.4l6-2.2Z"/></svg>
@@ -730,6 +757,7 @@
           Where the reviewers overreached, the paper says so and defends the original position instead of conceding to be agreeable
         </li>
       </ul>
+      </details>
     </div>
   </section>
 
@@ -775,7 +803,7 @@
           <div class="faq-answer"><p>People assume anything this long came out of a machine. It did not.</p>
           <p>The thought came from the work. I kept meeting companies deploying more agents and getting no more agentic, and I could not put it down. Then I pointed five models at my own draft and told them to break it.</p>
           <p>One found a number that cannot exist. One took my central claim apart with three citations I had to go and read before I would accept it. One found two hypotheses in the paper contradicting each other. Forty-one corrections are logged, two of them against my own measurements.</p>
-          <p>What I did not do is ask a model what to think. The argument is mine, so were the mistakes, and every decision about which objection to concede was mine. The log is on this page so you can check that rather than take my word for it.</p></div>
+          <p>What I did not do is ask a model what to think. The argument is mine, so were the mistakes, and every decision about which objection to concede was mine. Read <a href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/agentic-enterprise.md#appendix-d---corrections-of-record">Appendix D's correction log</a> to check that rather than take my word for it.</p></div>
         </details>
       </div>
     </div>
@@ -788,6 +816,7 @@
     <div class="footer-links">
       <a href="https://github.com/RagnarPitla/Agentic-Enterprise">GitHub</a>
       <a href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/agentic-enterprise.md">Read the paper</a>
+      <a href="./assets/original-page.zip" download>Original page snapshot (ZIP)</a>
     </div>
     <p class="footer-credits">Working paper, written as a disputation between a proposition seat and an objection seat. Five frontier models were used as adversarial reviewers; the corrections they forced are logged in Appendix D.</p>
     <p class="footer-note">Nothing here is a Microsoft position. The census covers one developer machine and generalises only as far as the argument it supports.</p>

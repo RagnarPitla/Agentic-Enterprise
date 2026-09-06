@@ -51,7 +51,7 @@ one of them. If you read nothing else, read section 3 and section 10.
 | `[SPECULATIVE]` | Deliberately beyond current practice, flagged so a reader can discount it |
 | `[CORRECTED]` | A claim this paper made and then withdrew. Appendix D lists all of them |
 
-Nothing is `[ESTABLISHED]` on the strength of recollection. **Appendix D contains thirty-one
+Nothing is `[ESTABLISHED]` on the strength of recollection. **Appendix D contains forty-one
 corrections of record**, including two of the paper's own measurements. That appendix is not an
 apology. It is the evidence that the method works, and it is the part of this paper I would defend
 hardest.

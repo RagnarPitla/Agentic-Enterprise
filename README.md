@@ -60,8 +60,12 @@ close them, and the strongest objection to the whole paper is stated in the
 conclusion rather than buried: the economics may simply not justify any of this.
 
 Every claim carries one of five epistemic labels, so a reader can tell a
-measurement from a citation from an argument. Appendix D logs 31 corrections
+measurement from a citation from an argument. Appendix D logs 41 corrections
 with what was claimed, what was wrong, and who caught it.
+
+The original landing page is preserved in
+[`site/assets/original-page.zip`](site/assets/original-page.zip). Extract it and
+open `site/index.html` to view the original design with its bundled assets.
 
 ## Licence and standing
 
