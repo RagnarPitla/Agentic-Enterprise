@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agentic Enterprise - Why there is still no agentic enterprise, and what would have to exist</title>
-<meta name="description" content="A working paper. Enterprises deployed agents everywhere and no enterprise became agentic. The argument: agents are scoped to sessions, enterprise work is scoped to commitments, and no system stores a commitment.">
+<meta name="description" content="A working paper testing whether durable commitments can help agents carry enterprise work across sessions and systems. Evidence, objections, and a proposed experiment.">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#ffffff">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Agentic Enterprise">
 <meta property="og:title" content="Agentic Enterprise - Why there is still no agentic enterprise, and what would have to exist">
-<meta property="og:description" content="A working paper. Enterprises deployed agents everywhere and no enterprise became agentic. The argument: agents are scoped to sessions, enterprise work is scoped to commitments, and no system stores a commitment.">
+<meta property="og:description" content="A working paper testing whether durable commitments can help agents carry enterprise work across sessions and systems. Evidence, objections, and a proposed experiment.">
 <meta property="og:url" content="https://ragnarpitla.github.io/Agentic-Enterprise/">
 <meta property="og:image" content="https://ragnarpitla.github.io/Agentic-Enterprise/assets/og-card.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Agentic Enterprise - Why there is still no agentic enterprise, and what would have to exist">
-<meta name="twitter:description" content="A working paper. Enterprises deployed agents everywhere and no enterprise became agentic. The argument: agents are scoped to sessions, enterprise work is scoped to commitments, and no system stores a commitment.">
+<meta name="twitter:description" content="A working paper testing whether durable commitments can help agents carry enterprise work across sessions and systems. Evidence, objections, and a proposed experiment.">
 <meta name="twitter:image" content="https://ragnarpitla.github.io/Agentic-Enterprise/assets/og-card.png">
 <meta name="twitter:image:alt" content="Agentic Enterprise: why there is still no agentic enterprise, and what would have to exist">
 
@@ -58,14 +58,17 @@
       <div class="hero-copy">
         <p class="hero-kicker badge"><img src="./assets/favicon.svg" alt="" width="12" height="12">Working paper</p>
         <h1 id="hero-heading">Why is there still no agentic enterprise? Yet.</h1>
-        <p class="sub-line">Every large company now runs agents. None of them runs agentically. The gap is not model quality and not adoption. It is that an agent is scoped to a session, enterprise work is scoped to a commitment, and no system in the building stores a commitment as a durable object. The commitment cannot travel.</p>
+        <p class="sub-line">Enterprise vendors now offer agents across business applications. That does not establish that work can travel between them. This paper tests a hypothesis: commitments that outlive a session need durable, shared state, not just a more capable agent.</p>
+        <p class="evidence-note"><strong>Hypothesis, not an industry-wide finding.</strong> The evidence combines published sources with a census of one developer's skill library.</p>
         <div class="cta-row">
           <a class="btn primary" href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/agentic-enterprise.md">Read the paper</a>
-          <a class="btn ghost" href="https://github.com/RagnarPitla/Agentic-Enterprise">View the code on GitHub</a>
+          <a class="btn ghost" href="https://github.com/RagnarPitla/Agentic-Enterprise">Explore the research</a>
         </div>
         <p class="microcopy">
           Nine falsifiable hypotheses, three of them load-bearing<span class="sep">*</span>Five adversarial model reviews<span class="sep">*</span>41 logged corrections, two of them to my own numbers
         </p>
+        <p class="microcopy">Paper v4.0, <time datetime="2026-09-04">4 September 2026</time>.
+          <a href="https://github.com/RagnarPitla/Agentic-Enterprise/blob/main/agentic-enterprise.md#appendix-d---corrections-of-record">Read the correction log</a>.</p>
       </div>
       <div class="hero-art">
         <svg viewBox="0 0 460 300" role="img" aria-label="On the left, six agents each sit inside its own walled box, and none of the boxes touch. On the right, a single line of work starts in one box and crosses every wall to reach the end. The agents are drawn inside the boundaries; the work is drawn across them." xmlns="http://www.w3.org/2000/svg">
@@ -111,11 +114,25 @@
     </div>
   </section>
 
+  <section class="prose-section band" id="commitment" aria-labelledby="commitment-heading">
+    <div class="container">
+      <h2 id="commitment-heading">The practical proposal: a commitment that survives the conversation</h2>
+      <p><strong>Illustrative example.</strong> A buyer agrees on a March call to purchase parts for delivery eleven weeks later. The promise must pass from the conversation to purchasing, receiving and finance without someone copying its meaning at every handoff.</p>
+      <ul class="commitment-fields">
+        <li><strong>Owner:</strong> a named buyer accountable for review and follow-through.</li>
+        <li><strong>Expiry:</strong> a review deadline for the provisional record, not automatic cancellation of a real obligation.</li>
+        <li><strong>Durable state:</strong> what was promised, to whom, the source, and whether it is provisional, confirmed, fulfilled or expired, with an audit trail.</li>
+      </ul>
+      <p><strong>Proposed, not demonstrated.</strong> Authorised agents would reference the same record across systems. Confirmation would require the appropriate authority; an expired proposal would remain auditable. The open question is whether this improves completion enough to pay for capture and reconciliation.</p>
+      <p><a href="#experiment">See the test that could disprove the hypothesis</a>.</p>
+    </div>
+  </section>
+
   <!-- ================================================ FIGURE: THE EMPTY BOX -->
   <section class="prose-section" id="record" aria-labelledby="record-heading">
     <div class="container">
-      <h2 id="record-heading">Every system of record stores its object. One does not.</h2>
-      <p>Four of these persist the thing their work is about, and any other system can go and ask them for it. The fifth was deployed alongside them and persists nothing a system can query.</p>
+      <h2 id="record-heading">The proposed gap: a shared record of the promise</h2>
+      <p><strong>Conceptual model.</strong> In the purchase example, an order and a ledger entry can persist while the original conversational promise remains only in a transcript. The empty box below represents that scenario, not a claim that all agents lack memory or that commitment models do not exist.</p>
       <div class="diagram">
         <svg class="fig-wide" viewBox="0 0 900 412" role="img" aria-label="Two rows of the same five systems: ERP, CRM, HR, ledger and agent. In the top row, what we assumed we had, each system sits above the object it durably stores: the order, the account, the employee, the entry, and the commitment. In the bottom row, what is actually stored, the first four are unchanged and the box under the agent is empty and drawn dashed, labelled nothing, with a note that the agent leaves a transcript in a log that nothing queries." xmlns="http://www.w3.org/2000/svg">
         <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
@@ -226,13 +243,13 @@
   <!-- ========================================================== PROBLEM -->
   <section class="prose-section" id="problem" aria-labelledby="problem-heading">
     <div class="container">
-      <h2 id="problem-heading">The money was spent. The capability did not arrive.</h2>
-      <p>Three answers get offered when someone asks why. Each one is testable, and each one fails.</p>
-      <p><strong>The models are not good enough yet.</strong> This predicts that capability improvements convert into enterprise autonomy. Between 2023 and 2026 benchmark scores moved a great deal. The share of multi-week, multi-system enterprise processes running without a human in the loop did not move with them. A theory whose central variable improved by an order of magnitude while the outcome stayed flat has a problem.</p>
-      <p><strong>Enterprises are slow.</strong> This predicts a lag, and lag predicts leaders. Cloud had leaders inside three years. Nobody can name the company that runs its order-to-cash agentically today. A diffusion curve with no leading edge is not a diffusion curve.</p>
-      <p><strong>Governance is blocking it.</strong> This predicts that the constraint is permission. But the teams with the most permission, the AI platform groups running their own tenancy, have not produced it either. They hit the same wall the regulated teams hit, without the regulator.</p>
-      <p>All three answers share a shape: they say the thing is on its way and something is delaying it. The fourth answer is less comfortable and it is the one this paper argues. <strong>The missing piece is not a better agent. It is an object that does not exist.</strong></p>
-      <p>An agent's memory ends when its session ends. Enterprise work does not end when a session ends. A purchase commitment made on a call in March is fulfilled by four systems over eleven weeks, and the only durable record of it is a sentence in someone's inbox. The agent was never the bottleneck. The <em>commitment</em> was never written down in a form any system could act on.</p>
+      <h2 id="problem-heading">Why another agent may not close the gap</h2>
+      <p>For the buyer's promise, the question is not just whether an agent can create an order. It is whether the meaning, authority and status of that promise survive every handoff until delivery and payment.</p>
+      <details class="reading-detail">
+        <summary>Alternative explanations: models, adoption and governance</summary>
+        <p>Better models, slower adoption and governance constraints could each explain limited autonomy. The evidence here does not rule them out. The paper proposes an additional explanation: state about the commitment is lost between sessions or systems.</p>
+        <p>These explanations need comparative tests, not a declaration that every alternative has failed. If improved models or an existing workflow carry the purchase promise reliably without a new commitment layer, the proposed layer may be unnecessary.</p>
+      </details>
     </div>
   </section>
 
@@ -240,7 +257,7 @@
   <section id="how-it-works" aria-labelledby="how-heading">
     <div class="container">
       <h2 id="how-heading">The argument</h2>
-      <p class="lede">The paper is written as a disputation. A proposition seat states each claim at full strength; an objection seat attacks it at full strength. Where the objection wins, the claim is cut rather than softened. Three disagreements are left standing because neither seat could close them.</p>
+      <p class="lede">Define the outcome, distinguish observations from predictions, and test whether a durable commitment changes the result.</p>
       <ol class="steps">
         <li>
           <h3>Define agentic so it can be false</h3>
